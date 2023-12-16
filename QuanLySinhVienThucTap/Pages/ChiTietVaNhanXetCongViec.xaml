@@ -22,7 +22,6 @@
         ChiTietVaNhanXetCongViecVM
     </Page.DataContext>
     <Page.Resources>
-
         <local:StatusToColorConverter x:Key="StatusToColorConverter"/>
     </Page.Resources>
     <Grid Background="LightGray" Width="auto" Height="auto">

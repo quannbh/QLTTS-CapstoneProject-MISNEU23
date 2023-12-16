@@ -123,19 +123,35 @@ namespace QuanLySinhVienThucTap.ViewModel
 
             var recordToUpdate = DataProvider.Ins.DB.tblNhiemVuDaoTaos.FirstOrDefault(p => p.MaNhiemVuDaoTao == SelectedNhiemVuDaoTao.MaNhiemVuDaoTao);
 
-            if (recordToUpdate.status != "expired")
+            if (recordToUpdate != null)
             {
-                recordToUpdate.Deadline = Deadline;
-                recordToUpdate.NgayBatDau = NgayBatDau;
-                DataProvider.Ins.DB.SaveChanges();
-            } else
-            {
-                recordToUpdate.Deadline = Deadline;
-                recordToUpdate.NgayBatDau = NgayBatDau;
-                recordToUpdate.status = "in-progress";
-                DataProvider.Ins.DB.SaveChanges();
+                if (NgayBatDau < Deadline)
+                {
+                    if (recordToUpdate.status != "expired")
+                    {
+                        recordToUpdate.Deadline = Deadline;
+                        recordToUpdate.NgayBatDau = NgayBatDau;
+                        DataProvider.Ins.DB.SaveChanges();
+                    }
+                    else
+                    {
+                        recordToUpdate.Deadline = Deadline;
+                        recordToUpdate.NgayBatDau = NgayBatDau;
+                        recordToUpdate.status = "in-progress";
+                        DataProvider.Ins.DB.SaveChanges();
+                    }
+                    MessageBox.Show("Cập nhật thông tin Nhiệm vụ đào tạo thành công!");
+                }
+                else
+                {
+                    MessageBox.Show("Có lỗi xảy ra. Ngày bắt đầu phải trước Deadline.", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
+                }
             }
-            MessageBox.Show("Cập nhật thành công!");
+            else
+            {
+                MessageBox.Show("Có lỗi xảy ra.", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
     }
 }

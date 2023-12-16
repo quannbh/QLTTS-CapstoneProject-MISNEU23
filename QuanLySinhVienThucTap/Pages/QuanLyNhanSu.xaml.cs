@@ -2,6 +2,7 @@
 using QuanLySinhVienThucTap.ViewModel;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -50,48 +51,34 @@ namespace QuanLySinhVienThucTap.Pages
         {
 
         }
-        /* private void ThemDuAnButton_Click(object sender, RoutedEventArgs e)
-{
-//AddProjectWindow addProjectWindow = new AddProjectWindow();
-//addProjectWindow.Owner = Application.Current.MainWindow;
-// if (addProjectWindow.ShowDialog() == true)
-{
-string projectName = addProjectWindow.ProjectNameTextBox.Text;
-// Tạo một Expander mới
-Expander newExpander = new Expander
-{
-   HorizontalAlignment = HorizontalAlignment.Stretch,
-   Header = projectName, // Đặt tên cho Expander mới
-   FontWeight = FontWeights.Bold,
-   Foreground = Brushes.DarkBlue
-};
-StackPanel stackPanel = new StackPanel
-{
-   Margin = new Thickness(24, 8, 24, 16),
-   Orientation = Orientation.Vertical
-};
 
-// Thêm các chức năng vào StackPanel này
-stackPanel.Children.Add(new ListBoxItem { Content = "Thêm nhân sự dự án", FontWeight = FontWeights.Normal, Foreground = Brushes.Black });
-stackPanel.Children.Add(new ListBoxItem { Content = "Xóa nhân sự dự án", FontWeight = FontWeights.Normal, Foreground = Brushes.Black });
-stackPanel.Children.Add(new ListBoxItem { Content = "Chỉnh sửa dự án", FontWeight = FontWeights.Normal, Foreground = Brushes.Black });
+    }
 
-// Đặt StackPanel là nội dung của Expander
-newExpander.Content = stackPanel;
-Border newborder = new Border
-{
-   Height = 1,
-   Background = Brushes.Black,
-   VerticalAlignment = VerticalAlignment.Bottom
-};
+    public class StatusToColorConverterOther : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            string status = value as string;
 
-// Tạo nội dung cho Expander mới, giống như bạn đã làm cho Expander hiện có.
+            if (status == "done")
+            {
+                return new SolidColorBrush(Colors.DarkGreen);
+            }
+            else if (status == "in-progress")
+            {
+                return new SolidColorBrush(Colors.DarkGoldenrod);
+            }
+            else if (status == "expired")
+            {
+                return new SolidColorBrush(Colors.DarkRed);
+            }
 
-// Thêm Expander mới vào Container
-//expanderContainer.Children.Add(newExpander);
-//expanderContainer.Children.Add(newborder);
-}*/
-        // }
+            return new SolidColorBrush(Colors.DarkGray);
+        }
 
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -32,7 +32,14 @@ namespace QuanLySinhVienThucTap.Model
                 foreach (var task in expiredTasks2)
                 {
                     task.status = "expired";
+                    var expiredtask3 = DataProvider.Ins.DB.tblNhanXetNhiemVuDAs.Where(x => x.MaNhiemVuDA == task.MaNhiemVuDA);
+                    foreach(var task3 in expiredtask3)
+                    {
+                        task3.Diem = 0;
+                    }
                 }
+
+                
                 DataProvider.Ins.DB.SaveChanges();
             }
         }
