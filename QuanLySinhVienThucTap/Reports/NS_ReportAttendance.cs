@@ -16,14 +16,14 @@ namespace QuanLySinhVienThucTap.Reports {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class NS_ReportAll : ReportClass {
+    public class NS_ReportAttendance : ReportClass {
         
-        public NS_ReportAll() {
+        public NS_ReportAttendance() {
         }
         
         public override string ResourceName {
             get {
-                return "NS_ReportAll.rpt";
+                return "NS_ReportAttendance.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace QuanLySinhVienThucTap.Reports {
         
         public override string FullResourceName {
             get {
-                return "QuanLySinhVienThucTap.Reports.NS_ReportAll.rpt";
+                return "QuanLySinhVienThucTap.Reports.NS_ReportAttendance.rpt";
             }
             set {
                 // Do nothing
@@ -74,7 +74,7 @@ namespace QuanLySinhVienThucTap.Reports {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section Section4 {
+        public CrystalDecisions.CrystalReports.Engine.Section ReportFooterSection2 {
             get {
                 return this.ReportDefinition.Sections[3];
             }
@@ -82,17 +82,9 @@ namespace QuanLySinhVienThucTap.Reports {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.CrystalReports.Engine.Section ReportFooterSection2 {
-            get {
-                return this.ReportDefinition.Sections[4];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
         public CrystalDecisions.CrystalReports.Engine.Section Section5 {
             get {
-                return this.ReportDefinition.Sections[5];
+                return this.ReportDefinition.Sections[4];
             }
         }
         
@@ -146,7 +138,7 @@ namespace QuanLySinhVienThucTap.Reports {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_percentDone {
+        public CrystalDecisions.Shared.IParameterField Parameter_nameTTS {
             get {
                 return this.DataDefinition.ParameterFields[6];
             }
@@ -154,7 +146,7 @@ namespace QuanLySinhVienThucTap.Reports {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_averangePoint {
+        public CrystalDecisions.Shared.IParameterField Parameter_dayAttendance {
             get {
                 return this.DataDefinition.ParameterFields[7];
             }
@@ -162,25 +154,17 @@ namespace QuanLySinhVienThucTap.Reports {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_percentDoneDaoTao {
+        public CrystalDecisions.Shared.IParameterField Parameter_salary {
             get {
                 return this.DataDefinition.ParameterFields[8];
-            }
-        }
-        
-        [Browsable(false)]
-        [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_personPD {
-            get {
-                return this.DataDefinition.ParameterFields[9];
             }
         }
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedNS_ReportAll : Component, ICachedReport {
+    public class CachedNS_ReportAttendance : Component, ICachedReport {
         
-        public CachedNS_ReportAll() {
+        public CachedNS_ReportAttendance() {
         }
         
         [Browsable(false)]
@@ -217,7 +201,7 @@ namespace QuanLySinhVienThucTap.Reports {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            NS_ReportAll rpt = new NS_ReportAll();
+            NS_ReportAttendance rpt = new NS_ReportAttendance();
             rpt.Site = this.Site;
             return rpt;
         }

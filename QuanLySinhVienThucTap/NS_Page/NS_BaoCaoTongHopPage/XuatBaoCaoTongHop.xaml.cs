@@ -42,7 +42,7 @@ namespace QuanLySinhVienThucTap.NS_Page.NS_BaoCaoTongHopPage
             await Task.Run(() =>
             {
                 ReportDocument reportDocument = new ReportDocument();
-                reportDocument.Load("C:\\QLTTS\\QuanLySinhVienThucTap\\Reports\\NS_ReportTTS.rpt");
+                reportDocument.Load("..\\..\\Reports\\NS_ReportTTS.rpt");
                 System.Data.DataSet dataSet = new System.Data.DataSet();
                 using (SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["QuanLySinhVienThucTap.Properties.Settings.TTSConnectionString"].ConnectionString))
                 {

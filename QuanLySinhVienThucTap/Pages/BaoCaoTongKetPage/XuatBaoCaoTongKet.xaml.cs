@@ -39,7 +39,7 @@ namespace QuanLySinhVienThucTap.Pages.BaoCaoTongKetPage
             await Task.Run(() =>
             {
                 ReportDocument reportDocument = new ReportDocument();
-                reportDocument.Load("C:\\QLTTS\\QuanLySinhVienThucTap\\Reports\\CrystalReport1.rpt");
+                reportDocument.Load("..\\..\\Reports\\CrystalReport1.rpt");
                 
                 
                 System.Data.DataSet dataSet = new System.Data.DataSet();

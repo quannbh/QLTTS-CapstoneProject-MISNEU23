@@ -26,6 +26,7 @@
     <viewmodel:ThemNhiemVuDaoTaoViewModel x:Key="ThemNhiemVuDaoTaoVM"></viewmodel:ThemNhiemVuDaoTaoViewModel>
     <viewmodel:NS_MainViewModel x:Key="NS_MainVM"></viewmodel:NS_MainViewModel>
     <viewmodel:NS_BaoCaoTongHopViewModel x:Key="NS_BaoCaoTongHopVM"></viewmodel:NS_BaoCaoTongHopViewModel>
+    <viewmodel:NS_BaoCaoChamCongViewModel x:Key="NS_BaoCaoChamCongVM"></viewmodel:NS_BaoCaoChamCongViewModel>
     <viewmodel:F1_TTS_ChiTietNhiemVuViewModel x:Key="TTS_ChiTietNhiemVuVM"></viewmodel:F1_TTS_ChiTietNhiemVuViewModel>
     <viewmodel:TTS_KetQuaKhoaHocViewModel x:Key="TTS_KetQuaKhoaHocVM"></viewmodel:TTS_KetQuaKhoaHocViewModel>
     <viewmodel:SuaNhiemVuDaoTaoViewModel x:Key="SuaNhiemVuDaoTaoVM"></viewmodel:SuaNhiemVuDaoTaoViewModel>

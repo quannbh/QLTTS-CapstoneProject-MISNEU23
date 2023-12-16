@@ -58,9 +58,6 @@ namespace QuanLySinhVienThucTap.ViewModel
                 SoLanChamCongThang();
 
             });
-
-
-
         }
 
         public void SoLanChamCongThang()
@@ -81,18 +78,30 @@ namespace QuanLySinhVienThucTap.ViewModel
             // Lấy ngày hiện tại (không bao gồm giờ, phút, giây)
             DateTime ngayHienTai = DateTime.Now;
 
-            var chamCongDaChamToday = DataProvider.Ins.DB.tblChamCongs
-    .FirstOrDefault(cc => DbFunctions.TruncateTime(cc.NgayChamCong) == ngayHienTai.Date && cc.MaTTS == UserId);
+            if (ngayHienTai.DayOfWeek == DayOfWeek.Saturday || ngayHienTai.DayOfWeek == DayOfWeek.Sunday)
+            {
+                MessageBox.Show($"Có lỗi xảy ra. Chưa đến thời gian chấm công.", "Chưa đến thời gian chấm công", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            else if (ngayHienTai.Hour < 6)
+            {
+                MessageBox.Show($"Có lỗi xảy ra. Chưa đến thời gian chấm công, vui lòng quay lại sau.", "Chưa đến thời gian chấm công", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            else if (ngayHienTai.Hour >= 10)
+            {
+                MessageBox.Show($"Có lỗi xảy ra. Đã quá thời gian chấm công, vui lòng quay lại vào ngày mai.", "Quá thời gian chấm công", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+                var chamCongDaChamToday = DataProvider.Ins.DB.tblChamCongs.FirstOrDefault(cc => DbFunctions.TruncateTime(cc.NgayChamCong) == ngayHienTai.Date && cc.MaTTS == UserId);
 
             if (chamCongDaChamToday != null)
             {
-                // Lấy giờ, phút và giây từ NgayChamCong
                 int hourChamCong = chamCongDaChamToday.NgayChamCong.Value.Hour;
                 int minuteChamCong = chamCongDaChamToday.NgayChamCong.Value.Minute;
                 int secondChamCong = chamCongDaChamToday.NgayChamCong.Value.Second;
-
-                // Hiển thị thông báo
-                MessageBox.Show($"Có lỗi xảy ra. Hôm nay bạn đã chấm công trước đó vào lúc {hourChamCong:D2}:{minuteChamCong:D2}:{secondChamCong:D2}", "Đã chấm công trước đó", MessageBoxButton.OK, MessageBoxImage.Warning);
+                MessageBox.Show($"Có lỗi xảy ra. Hôm nay bạn đã chấm công trước đó vào lúc {hourChamCong:D2}:{minuteChamCong:D2}:{secondChamCong:D2}", "Đã chấm công trước đó", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             else
             {

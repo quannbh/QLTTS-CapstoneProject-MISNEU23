@@ -124,8 +124,9 @@ namespace QuanLySinhVienThucTap.ViewModel
             {
                 Frame frame = p.gridBaoCao.Children[0] as Frame;
                 while (frame.NavigationService.RemoveBackEntry() != null) { }
-                frame.NavigationService.Navigate(new NS_BaoCaoTongHop(PhongBanUser,UserDepart,UserName)) ;
+                frame.NavigationService.Navigate(new NS_BaoCaoChamCong(PhongBanUser,UserDepart,UserName)) ;
             });
+
         }
     }
 }

@@ -53,7 +53,7 @@
                             <TextBlock Text="{Binding UserRole}" FontWeight="Medium" FontSize="14" HorizontalAlignment="Center" Grid.Row="3"/>
                             <TextBlock Text="{Binding UserDepartDisplay}" FontWeight="Medium" FontSize="14" HorizontalAlignment="Center" Grid.Row="4"/>
                         </Grid>
-                        <Expander Width="230" Header="Báo cáo Tổng hợp" FontWeight="Bold" Foreground="DarkBlue">
+                        <Expander Width="230" Header="Báo cáo Chấm công" FontWeight="Bold" Foreground="DarkBlue">
                             <ListBox>
                                 <ListBoxItem Content="Xuất Báo cáo" FontWeight="Normal" x:Name="ListBoxItem2">
                                     <i:Interaction.Triggers>

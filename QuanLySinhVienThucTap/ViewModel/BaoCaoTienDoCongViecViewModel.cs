@@ -120,6 +120,18 @@ namespace QuanLySinhVienThucTap.ViewModel
             }
         }
 
+        private double _SoDiemTrungBinh;
+
+        public double SoDiemTrungBinh
+        {
+            get { return _SoDiemTrungBinh; }
+            set
+            {
+                _SoDiemTrungBinh = value;
+                OnPropertyChanged();
+            }
+        }
+
         public ICommand LoadedCommand { get; set; }
         public ICommand XuatBaoCaoCommand { get; set; }
 
@@ -160,6 +172,7 @@ namespace QuanLySinhVienThucTap.ViewModel
             var nhiemVuList = DataProvider.Ins.DB.tblNhiemVuDAs.Where(x => x.MaTTS == SelectedTTS.MaTTS && x.NgayBatDau >= NgayBatDau && x.NgayBatDau <= NgayKetThuc).OrderBy(x=> x.MaDA).ToList();
             var count = nhiemVuList.Count();
             var nvDone = nhiemVuList.Count(x => x.status == "done");
+            int countDiem = 0;
             if (count == 0)
             {
                 MessageBox.Show("Thực tập sinh không có nhiệm vụ dự án nào trong khoảng thời gian này.");
@@ -176,11 +189,19 @@ namespace QuanLySinhVienThucTap.ViewModel
                 newNhiemVuDA.status = item.status;
                 newNhiemVuDA.MaTTS = item.MaTTS;
                 NhiemVuDAList.Add(newNhiemVuDA);
+
+                var diemItem = DataProvider.Ins.DB.tblNhanXetNhiemVuDAs.Where(x => x.MaNhiemVuDA == item.MaNhiemVuDA).Select(x => x.Diem).SingleOrDefault();
+                if (diemItem != null)
+                {
+                    countDiem += 1;
+                    int diem = diemItem.Value;
+                    SoDiemTrungBinh += diem;
+                }
             }
 
             TongSo = count;
             TiLeHoanThanh = Math.Round(((double) nvDone / count)*100, 2);
-
+            SoDiemTrungBinh = countDiem != 0 ? SoDiemTrungBinh / countDiem : 0;
         }
     }
 }
