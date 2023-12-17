@@ -7,7 +7,7 @@
       mc:Ignorable="d" 
       xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
 	xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-             TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+      TextElement.Foreground="{DynamicResource MaterialDesignBody}"
              TextElement.FontWeight="Regular"
              TextElement.FontSize="13"
              TextOptions.TextFormattingMode="Ideal"
@@ -17,7 +17,6 @@
       d:DesignHeight="736" d:DesignWidth="1280"
       Name="TTS_DSKH"
       Title="TTS_DanhSachKhoaHoc">
-    
     <Page.DataContext>
         TTS_DanhSachKhoaHocVM
     </Page.DataContext>
@@ -44,7 +43,7 @@
             <Grid Grid.Row="0">
                 <materialDesign:Card VerticalAlignment="Stretch" HorizontalAlignment="Center">
                     <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
-                        <ListView SelectionMode="Extended" ItemsSource="{Binding ListKhoaHoc}" SelectedItem="{Binding SelectedKhoaHoc, Mode=TwoWay}">
+                        <ListView SelectionMode="Extended" ItemsSource="{Binding ListKhoaHoc, Mode=TwoWay}" SelectedItem="{Binding SelectedKhoaHoc, Mode=TwoWay}">
                             <ListView.View>
                                 <GridView>
                                     <GridView.Columns>

@@ -1,4 +1,5 @@
 ﻿using QuanLySinhVienThucTap.Model;
+using QuanLySinhVienThucTap.TTS_Page;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -80,15 +81,13 @@ namespace QuanLySinhVienThucTap.ViewModel
         {
             LoadKhoaHocCommand = new RelayCommand<ListBox>((p) => { return true; }, (p) =>
             {
-                 LoadNhiemVuObj();
-                
+                LoadNhiemVuObj();
             });
 
-            CompleteCommand = new RelayCommand<ListBox>((p) => { return true; }, (p) =>
+            CompleteCommand = new RelayCommand<TTS_DanhSachKhoaHoc>((p) => { return true; }, (p) =>
             {
                 HoanThanhKhoaHoc();
                 LoadNhiemVuObj();
-
             });
         }
         public void LoadNhiemVuObj()
