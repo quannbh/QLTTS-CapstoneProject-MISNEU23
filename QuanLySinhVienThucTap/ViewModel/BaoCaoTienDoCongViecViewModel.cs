@@ -146,7 +146,12 @@ namespace QuanLySinhVienThucTap.ViewModel
             {
                 if (SelectedTTS == null)
                 {
-                    MessageBox.Show("Vui lòng chọn thực tập sinh cần truy xuất.");
+                    MessageBox.Show("Có lỗi xảy ra! Vui lòng chọn Thực tập sinh cần xuất báo cáo!", "Lỗi!", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
+                }
+                if (NgayBatDau > NgayKetThuc)
+                {
+                    MessageBox.Show("Có lỗi xảy ra! Vui lòng chọn Ngày bắt đầu trước Ngày Kết thúc", "Lỗi!", MessageBoxButton.OK, MessageBoxImage.Error);
                     return;
                 }
                 XuatBaoCao();

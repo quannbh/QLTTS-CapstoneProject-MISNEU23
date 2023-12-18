@@ -55,7 +55,15 @@ MaKhoaDaoTao varchar(30) foreign key references tblKhoaDaoTao(MaKhoaDaoTao) ON D
 NoiDung text,
 Video varchar(max)
 )
+ALTER TABLE tblNoiDungDaoTao
+ALTER COLUMN NoiDung nvarchar(max);
 
+insert into tblNoiDungDaoTao(MaKhoaDaoTao,NoiDung,Video) values ('DTKT01', N'Nội dung Khóa học','DTKT01\\KiemToanNganHang.mp4')
+insert into tblNoiDungDaoTao(MaKhoaDaoTao,NoiDung,Video) values ('DTKT02', N'Nội dung Khóa học','DTKT02\\KiemToanNhaNuoc.mp4')
+insert into tblNoiDungDaoTao(MaKhoaDaoTao,NoiDung,Video) values ('DTNS01', N'Nội dung Khóa học','DTNS01\\TinHocCoBan.mp4')
+insert into tblNoiDungDaoTao(MaKhoaDaoTao,NoiDung,Video) values ('DTC01', N'Nội dung Khóa học','DTC01\\BaoMatThongTin.mp4')
+insert into tblNoiDungDaoTao(MaKhoaDaoTao,NoiDung,Video) values ('DTIT01', N'Nội dung Khóa học','DTIT01\\KiemSoatNoiBo.mp4')
+insert into tblNoiDungDaoTao(MaKhoaDaoTao,NoiDung,Video) values ('DTIT02', N'Nội dung Khóa học','DTIT02\\Oracle.mp4')
 /*create table tblNhomDA(
 MaNhomDA varchar(30) primary key,
 TenNhomDA nvarchar(max),

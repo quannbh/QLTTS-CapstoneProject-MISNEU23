@@ -5,6 +5,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Input;
 
 namespace QuanLySinhVienThucTap.ViewModel
@@ -98,6 +99,21 @@ namespace QuanLySinhVienThucTap.ViewModel
 
             XuatBaoCaoCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
             {
+                if(SelectedPhongBan == null)
+                {
+                    MessageBox.Show("Có lỗi xảy ra! Vui lòng chọn Phòng Ban cần xuất báo cáo!", "Lỗi!", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
+                }
+                if (NgayBatDau == null || NgayKetThuc == null)
+                {
+                    MessageBox.Show("Có lỗi xảy ra! Vui lòng chọn Ngày bắt đầu và Ngày kết thúc!", "Lỗi!", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
+                }
+                if (NgayBatDau >= NgayKetThuc)
+                {
+                    MessageBox.Show("Có lỗi xảy ra! Vui lòng chọn Ngày bắt đầu trước Ngày Kết thúc", "Lỗi!", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
+                }
                 NgayKetThuc = NgayKetThuc.Value.AddDays(1);
                 XuatBaoCao();
             });
