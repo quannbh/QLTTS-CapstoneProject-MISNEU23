@@ -18,6 +18,7 @@ namespace QuanLySinhVienThucTap.Model
         public tblKhoaDaoTao()
         {
             this.tblNhiemVuDaoTaos = new HashSet<tblNhiemVuDaoTao>();
+            this.tblNoiDungDaoTaos = new HashSet<tblNoiDungDaoTao>();
         }
     
         public string MaKhoaDaoTao { get; set; }
@@ -25,5 +26,7 @@ namespace QuanLySinhVienThucTap.Model
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<tblNhiemVuDaoTao> tblNhiemVuDaoTaos { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<tblNoiDungDaoTao> tblNoiDungDaoTaos { get; set; }
     }
 }

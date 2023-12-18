@@ -283,6 +283,9 @@
     <Compile Include="Model\tblNhiemVuDaoTao.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\tblNoiDungDaoTao.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Model\tblPhongBan.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -415,6 +418,12 @@
     <Compile Include="TTS_Page\TTS_DanhSachKhoaHoc.xaml.cs">
       <DependentUpon>TTS_DanhSachKhoaHoc.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TTS_Page\TTS_DanhSachKhoaHocPage\TTS_ChiTietKhoaHoc.xaml.cs">
+      <DependentUpon>TTS_ChiTietKhoaHoc.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TTS_Page\TTS_DanhSachKhoaHocPage\TTS_ChiTietKhoaHocPage_Inside\TTS_NoiDungVideoKhoaHoc.xaml.cs">
+      <DependentUpon>TTS_NoiDungVideoKhoaHoc.xaml</DependentUpon>
+    </Compile>
     <Compile Include="TTS_Page\TTS_DanhSachNhiemVu.xaml.cs">
       <DependentUpon>TTS_DanhSachNhiemVu.xaml</DependentUpon>
     </Compile>
@@ -445,8 +454,10 @@
     <Compile Include="ViewModel\BaseViewModel.cs" />
     <Compile Include="ViewModel\ChiTietVaNhanXetCongViecVM.cs" />
     <Compile Include="ViewModel\ControlBarViewModel.cs" />
+    <Compile Include="ViewModel\F1_TTS_ChiTietKhoaHocViewModel.cs" />
     <Compile Include="ViewModel\F1_TTS_ChiTietNhiemVuViewModel.cs" />
     <Compile Include="ViewModel\F1_TTS_ThemYeuCauViewModel.cs" />
+    <Compile Include="ViewModel\F2_TTS_NoiDungVideoKhoaHocViewModel.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\NS_BaoCaoChamCongViewModel.cs" />
@@ -611,6 +622,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="TTS_Page\TTS_DanhSachKhoaHocPage\TTS_ChiTietKhoaHoc.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TTS_Page\TTS_DanhSachKhoaHocPage\TTS_ChiTietKhoaHocPage_Inside\TTS_NoiDungVideoKhoaHoc.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="TTS_Page\TTS_DanhSachNhiemVu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -698,7 +717,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="TTS_Page\TTS_DanhSachKhoaHocSinglePage\" />
+    <Folder Include="VideoFileSystem\VideoKhoaHoc\DTC01\" />
+    <Folder Include="VideoFileSystem\VideoKhoaHoc\DTIT01\" />
+    <Folder Include="VideoFileSystem\VideoKhoaHoc\DTIT02\" />
+    <Folder Include="VideoFileSystem\VideoKhoaHoc\DTKT01\" />
+    <Folder Include="VideoFileSystem\VideoKhoaHoc\DTKT02\" />
+    <Folder Include="VideoFileSystem\VideoKhoaHoc\DTNS01\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Static\Images\800px-KPMG.svg.png" />

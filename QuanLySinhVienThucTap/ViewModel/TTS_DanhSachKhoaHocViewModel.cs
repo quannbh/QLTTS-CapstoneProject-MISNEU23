@@ -1,5 +1,6 @@
 ﻿using QuanLySinhVienThucTap.Model;
 using QuanLySinhVienThucTap.TTS_Page;
+using QuanLySinhVienThucTap.TTS_Page.TTS_DanhSachKhoaHocPage;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -66,7 +67,6 @@ namespace QuanLySinhVienThucTap.ViewModel
         }
 
         private string _tenKhoa;
-
         public string TenKhoa
         {
             get { return _tenKhoa; }
@@ -84,10 +84,15 @@ namespace QuanLySinhVienThucTap.ViewModel
                 LoadNhiemVuObj();
             });
 
-            CompleteCommand = new RelayCommand<TTS_DanhSachKhoaHoc>((p) => { return true; }, (p) =>
+            CompleteCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
             {
                 HoanThanhKhoaHoc();
                 LoadNhiemVuObj();
+            });
+
+            DetailsCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
+            {
+                ChiTietKhoaHoc();
             });
         }
         public void LoadNhiemVuObj()
@@ -133,5 +138,17 @@ namespace QuanLySinhVienThucTap.ViewModel
                 return;
             }
         }
+
+        public void ChiTietKhoaHoc()
+        {
+            if (SelectedKhoaHoc == null)
+            {
+                MessageBox.Show("Vui lòng chọn nhiệm vụ đào tạo.");
+                return;
+            }
+            TTS_ChiTietKhoaHoc chiTietKhoaHoc = new TTS_ChiTietKhoaHoc(SelectedKhoaHoc.MaKhoaDaoTao);
+            chiTietKhoaHoc.Show();
+        }
+
     }
 }

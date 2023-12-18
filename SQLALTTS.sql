@@ -49,6 +49,13 @@ status varchar(20) CHECK (status IN ('approved','done', 'in-progress', 'expired'
 )
 drop table tblNhiemVuDaoTao;
 
+create table tblNoiDungDaoTao(
+MaNoiDungDaoTao int identity(100,1) primary key,
+MaKhoaDaoTao varchar(30) foreign key references tblKhoaDaoTao(MaKhoaDaoTao) ON DELETE CASCADE,
+NoiDung text,
+Video varchar(max)
+)
+
 /*create table tblNhomDA(
 MaNhomDA varchar(30) primary key,
 TenNhomDA nvarchar(max),

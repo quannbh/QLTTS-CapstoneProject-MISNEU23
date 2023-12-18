@@ -1,22 +1,22 @@
 ﻿<Page x:Class="QuanLySinhVienThucTap.TTS_Page.TTS_DanhSachKhoaHoc"
-      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:QuanLySinhVienThucTap.TTS_Page"
-      mc:Ignorable="d" 
-      xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
-	xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-      TextElement.Foreground="{DynamicResource MaterialDesignBody}"
-             TextElement.FontWeight="Regular"
-             TextElement.FontSize="13"
-             TextOptions.TextFormattingMode="Ideal"
-             TextOptions.TextRenderingMode="Auto"
-             Background="{DynamicResource MaterialDesignPaper}"
-             FontFamily="{DynamicResource MaterialDesignFont}"
-      d:DesignHeight="736" d:DesignWidth="1280"
-      Name="TTS_DSKH"
-      Title="TTS_DanhSachKhoaHoc">
+   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+   xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+   xmlns:local="clr-namespace:QuanLySinhVienThucTap.TTS_Page"
+   mc:Ignorable="d" 
+   xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+   xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+   TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+   TextElement.FontWeight="Regular"
+   TextElement.FontSize="13"
+   TextOptions.TextFormattingMode="Ideal"
+   TextOptions.TextRenderingMode="Auto"
+   Background="{DynamicResource MaterialDesignPaper}"
+   FontFamily="{DynamicResource MaterialDesignFont}"
+   d:DesignHeight="736" d:DesignWidth="1280"
+   Name="TTS_DSKH"
+   Title="TTS_DanhSachKhoaHoc">
     <Page.DataContext>
         TTS_DanhSachKhoaHocVM
     </Page.DataContext>
@@ -32,7 +32,7 @@
         </Grid.RowDefinitions>
         <Grid Grid.Row="0">
             <TextBlock Text="Danh sách khóa học"
-               FontSize="28" FontWeight="Bold"  HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            FontSize="28" FontWeight="Bold"  HorizontalAlignment="Center" VerticalAlignment="Top"/>
         </Grid>
         <Border Height="1" Background="Black" VerticalAlignment="Bottom"/>
         <Grid Grid.Row="1">

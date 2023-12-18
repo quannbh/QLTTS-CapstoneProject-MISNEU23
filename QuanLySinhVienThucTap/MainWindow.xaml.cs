@@ -29,10 +29,6 @@ namespace QuanLySinhVienThucTap
             viewModel.UserId = id.ToUpper();
             DataContext = viewModel;
             gridQuanLy.DataContext = viewModel;
-            /*ListBoxItem1.MouseLeftButtonUp += ListBoxItem1_Click;*/
-            /*currentUserControl = new ManageProject_ManageProjectPerson();*/
-            /*            ListBoxItem2.MouseLeftButtonUp += ListBoxItem2_Click;
-                        ListBoxItem3.MouseLeftButtonUp += ListBoxItem2_Click;*/
         }
 
         private void ListBoxItem_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)

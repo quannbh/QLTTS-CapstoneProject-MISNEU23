@@ -34,6 +34,7 @@ namespace QuanLySinhVienThucTap.Model
         public virtual DbSet<tblNhanXetNhiemVuDA> tblNhanXetNhiemVuDAs { get; set; }
         public virtual DbSet<tblNhiemVuDA> tblNhiemVuDAs { get; set; }
         public virtual DbSet<tblNhiemVuDaoTao> tblNhiemVuDaoTaos { get; set; }
+        public virtual DbSet<tblNoiDungDaoTao> tblNoiDungDaoTaos { get; set; }
         public virtual DbSet<tblPhongBan> tblPhongBans { get; set; }
         public virtual DbSet<tblQL> tblQLs { get; set; }
         public virtual DbSet<tblTrucThuoc> tblTrucThuocs { get; set; }

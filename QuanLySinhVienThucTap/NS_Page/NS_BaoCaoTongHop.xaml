@@ -4,7 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:QuanLySinhVienThucTap.NS_Page"
-      mc:Ignorable="d" 
+      mc:Ignorable="d"
       xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
 	xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
              TextElement.Foreground="{DynamicResource MaterialDesignBody}"
@@ -69,7 +69,7 @@
             VerticalAlignment="Center"
             materialDesign:HintAssist.Hint="Deadline"
             Style="{StaticResource MaterialDesignFloatingHintDatePicker}"
-             SelectedDate="{Binding NgayKetThuc, UpdateSourceTrigger=PropertyChanged}">
+            SelectedDate="{Binding NgayKetThuc, UpdateSourceTrigger=PropertyChanged}">
                             </DatePicker>
                         </StackPanel>
                     </materialDesign:Card>

@@ -4,38 +4,40 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="6302418a45e246df8872cae025b221ad" Name="Diagram1" ZoomLevel="40">
-        <EntityTypeShape EntityType="TTSModel.tblChamCong" Width="1.5" PointX="8.25" PointY="15.75" />
-        <EntityTypeShape EntityType="TTSModel.tblChucVu" Width="1.5" PointX="0.75" PointY="14.375" />
-        <EntityTypeShape EntityType="TTSModel.tblDuAn" Width="1.5" PointX="0.75" PointY="8.25" />
-        <EntityTypeShape EntityType="TTSModel.tblKhoaDaoTao" Width="1.5" PointX="6" PointY="7.5" />
-        <EntityTypeShape EntityType="TTSModel.tblNguoiPheDuyet" Width="1.5" PointX="10.5" PointY="16.75" />
-        <EntityTypeShape EntityType="TTSModel.tblNhanSuDA" Width="1.5" PointX="8.25" PointY="11.25" />
-        <EntityTypeShape EntityType="TTSModel.tblNhanXetNhiemVuDA" Width="1.5" PointX="13.5" PointY="11.25" />
-        <EntityTypeShape EntityType="TTSModel.tblNhiemVuDA" Width="1.5" PointX="11.25" PointY="10.875" />
-        <EntityTypeShape EntityType="TTSModel.tblNhiemVuDaoTao" Width="1.5" PointX="8.25" PointY="8" />
-        <EntityTypeShape EntityType="TTSModel.tblPhongBan" Width="1.5" PointX="0.75" PointY="11.25" />
-        <EntityTypeShape EntityType="TTSModel.tblQL" Width="1.5" PointX="3" PointY="11" />
-        <EntityTypeShape EntityType="TTSModel.tblTrucThuoc" Width="1.5" PointX="3" PointY="8.25" />
-        <EntityTypeShape EntityType="TTSModel.tblTT" Width="1.5" PointX="6" PointY="10.625" />
-        <EntityTypeShape EntityType="TTSModel.tblYeuCau" Width="1.5" PointX="8.25" PointY="22" />
-        <AssociationConnector Association="TTSModel.FK__tblChamCo__MaTTS__3C69FB99" />
-        <AssociationConnector Association="TTSModel.FK__tblQL__MaChucVu__1920BF5C" />
-        <AssociationConnector Association="TTSModel.FK__tblTTS__MaChucVu__15502E78" />
-        <AssociationConnector Association="TTSModel.FK__tblNhanSuD__MaDA__2D27B809" />
-        <AssociationConnector Association="TTSModel.FK__tblNhiemVu__MaDA__24927208" />
-        <AssociationConnector Association="TTSModel.FK__tblTrucThu__MaDA__30F848ED" />
-        <AssociationConnector Association="TTSModel.FK__tblNhiemV__MaKho__1DE57479" />
-        <AssociationConnector Association="TTSModel.FK__tblNguoiP__MaYeu__398D8EEE" />
-        <AssociationConnector Association="TTSModel.FK__tblNguoiPh__MaQL__38996AB5" />
-        <AssociationConnector Association="TTSModel.FK__tblNhanSu__MaTTS__2E1BDC42" />
-        <AssociationConnector Association="TTSModel.FK__tblNhanXe__MaNhi__29572725" />
-        <AssociationConnector Association="TTSModel.FK__tblNhiemV__MaTTS__25869641" />
-        <AssociationConnector Association="TTSModel.FK__tblNhiemV__MaTTS__1ED998B2" />
-        <AssociationConnector Association="TTSModel.FK__tblQL__MaPhongBa__182C9B23" />
-        <AssociationConnector Association="TTSModel.FK__tblTrucTh__MaPho__31EC6D26" />
-        <AssociationConnector Association="TTSModel.FK__tblTTS__MaPhongB__145C0A3F" />
-        <AssociationConnector Association="TTSModel.FK__tblYeuCau__MaTTS__34C8D9D1" />
+      <Diagram DiagramId="6302418a45e246df8872cae025b221ad" Name="Diagram1" ZoomLevel="46">
+        <EntityTypeShape EntityType="TTSModel.tblChamCong" Width="1.625" PointX="9.5" PointY="12.25" FillColor="224, 224, 224" />
+        <EntityTypeShape EntityType="TTSModel.tblChucVu" Width="1.625" PointX="7.875" PointY="4.75" FillColor="224, 224, 224" />
+        <EntityTypeShape EntityType="TTSModel.tblDuAn" Width="1.625" PointX="7.125" PointY="10.5" FillColor="224, 224, 224" />
+        <EntityTypeShape EntityType="TTSModel.tblKhoaDaoTao" Width="1.625" PointX="13.5" PointY="1.5" FillColor="224, 224, 224" />
+        <EntityTypeShape EntityType="TTSModel.tblNguoiPheDuyet" Width="1.625" PointX="15.75" PointY="8.375" FillColor="224, 224, 224" />
+        <EntityTypeShape EntityType="TTSModel.tblNhanSuDA" Width="1.625" PointX="11.625" PointY="3.5" FillColor="224, 224, 224" />
+        <EntityTypeShape EntityType="TTSModel.tblNhanXetNhiemVuDA" Width="1.625" PointX="14.875" PointY="11.125" FillColor="224, 224, 224" />
+        <EntityTypeShape EntityType="TTSModel.tblNhiemVuDA" Width="1.625" PointX="12.75" PointY="7.25" FillColor="224, 224, 224" />
+        <EntityTypeShape EntityType="TTSModel.tblNhiemVuDaoTao" Width="1.625" PointX="15.75" PointY="5.375" FillColor="224, 224, 224" />
+        <EntityTypeShape EntityType="TTSModel.tblNoiDungDaoTao" Width="1.625" PointX="15.75" PointY="3" FillColor="224, 224, 224" />
+        <EntityTypeShape EntityType="TTSModel.tblPhongBan" Width="1.625" PointX="5.625" PointY="5.875" FillColor="224, 224, 224" />
+        <EntityTypeShape EntityType="TTSModel.tblQL" Width="1.625" PointX="9.375" PointY="1.5" FillColor="224, 224, 224" />
+        <EntityTypeShape EntityType="TTSModel.tblTrucThuoc" Width="1.625" PointX="7.875" PointY="7.375" FillColor="224, 224, 224" />
+        <EntityTypeShape EntityType="TTSModel.tblTT" Width="1.625" PointX="10.5" PointY="7" FillColor="224, 224, 224" />
+        <EntityTypeShape EntityType="TTSModel.tblYeuCau" Width="1.625" PointX="12.75" PointY="12" FillColor="224, 224, 224" />
+        <AssociationConnector Association="TTSModel.FK__tblChamCo__MaTTS__5070F446" />
+        <AssociationConnector Association="TTSModel.FK__tblQL__MaChucVu__2D27B809" />
+        <AssociationConnector Association="TTSModel.FK__tblTTS__MaChucVu__29572725" />
+        <AssociationConnector Association="TTSModel.FK__tblNhanSuD__MaDA__412EB0B6" />
+        <AssociationConnector Association="TTSModel.FK__tblNhiemVu__MaDA__38996AB5" />
+        <AssociationConnector Association="TTSModel.FK__tblTrucThu__MaDA__44FF419A" />
+        <AssociationConnector Association="TTSModel.FK__tblNhiemV__MaKho__31EC6D26" />
+        <AssociationConnector Association="TTSModel.FK__tblNoiDun__MaKho__5CD6CB2B" />
+        <AssociationConnector Association="TTSModel.FK__tblNguoiP__MaYeu__4D94879B" />
+        <AssociationConnector Association="TTSModel.FK__tblNguoiPh__MaQL__4CA06362" />
+        <AssociationConnector Association="TTSModel.FK__tblNhanSu__MaTTS__4222D4EF" />
+        <AssociationConnector Association="TTSModel.FK__tblNhanXe__MaNhi__3D5E1FD2" />
+        <AssociationConnector Association="TTSModel.FK__tblNhiemV__MaTTS__398D8EEE" />
+        <AssociationConnector Association="TTSModel.FK__tblNhiemV__MaTTS__32E0915F" />
+        <AssociationConnector Association="TTSModel.FK__tblQL__MaPhongBa__2C3393D0" />
+        <AssociationConnector Association="TTSModel.FK__tblTrucTh__MaPho__45F365D3" />
+        <AssociationConnector Association="TTSModel.FK__tblTTS__MaPhongB__286302EC" />
+        <AssociationConnector Association="TTSModel.FK__tblYeuCau__MaTTS__48CFD27E" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

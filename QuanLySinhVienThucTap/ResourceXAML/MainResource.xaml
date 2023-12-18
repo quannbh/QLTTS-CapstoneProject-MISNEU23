@@ -33,4 +33,6 @@
     <viewmodel:BaoCaoTienDoCongViecViewModel x:Key="BaoCaoTienDoCongViecVM"></viewmodel:BaoCaoTienDoCongViecViewModel>
     <viewmodel:BaoCaoSoBuoiLamViecViewModel x:Key="BaoCaoSoBuoiLamViecVM"></viewmodel:BaoCaoSoBuoiLamViecViewModel>
     <viewmodel:BaoCaoKetQuaDaoTaoViewModel x:Key="BaoCaoKetQuaDaoTaoVM"></viewmodel:BaoCaoKetQuaDaoTaoViewModel>
+    <viewmodel:F1_TTS_ChiTietKhoaHocViewModel x:Key="F1_TTS_ChiTietKhoaHocVM"></viewmodel:F1_TTS_ChiTietKhoaHocViewModel>
+    <viewmodel:F2_TTS_NoiDungVideoKhoaHocViewModel x:Key="F2_TTS_NoiDungVideoKhoaHocVM"></viewmodel:F2_TTS_NoiDungVideoKhoaHocViewModel>
 </ResourceDictionary>
