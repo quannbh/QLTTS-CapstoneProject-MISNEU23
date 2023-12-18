@@ -7,33 +7,31 @@
       mc:Ignorable="d" 
       d:DesignHeight="550" d:DesignWidth="900"
       xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
-	xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-             TextElement.Foreground="{DynamicResource MaterialDesignBody}"
-             TextElement.FontWeight="Regular"
-             TextElement.FontSize="13"
-             TextOptions.TextFormattingMode="Ideal"
-             TextOptions.TextRenderingMode="Auto"
-             Background="{DynamicResource MaterialDesignPaper}"
-             FontFamily="{DynamicResource MaterialDesignFont}"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+      TextElement.FontWeight="Regular"
+      TextElement.FontSize="13"
+      TextOptions.TextFormattingMode="Ideal"
+      TextOptions.TextRenderingMode="Auto"
+      Background="{DynamicResource MaterialDesignPaper}"
+      FontFamily="{DynamicResource MaterialDesignFont}"
       DataContext="{StaticResource F2_TTS_NoiDungVideoKhoaHocVM}"
       Name="TTS_NDVKH"
       Title="TTS_NoiDungVideoKhoaHoc">
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding LoadedCommand}" />
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <TextBlock Grid.Row="0" FontSize="28" Text="{Binding NoiDung}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         <Grid Grid.Row="1">
-            <MediaElement x:Name="mediaElement" UnloadedBehavior="Stop" LoadedBehavior="Manual" Stretch="Fill" IsMuted="True" />
-            <Border x:Name="overlayBorder" Background="Black" Opacity="0" VerticalAlignment="Center" HorizontalAlignment="Center">
-                <Grid>
-                    <Grid>
-                        <Image x:Name="playIcon" Source="pack://application:,,,/Static/Images/1616475167756-KPMG_logo.svg.png" Width="48" Height="48" Visibility="Visible"/>
-                        <Image x:Name="pauseIcon" Source="pack://application:,,,/Static/Images/1616475167756-KPMG_logo.svg.png" Width="48" Height="48" Visibility="Collapsed"/>
-                    </Grid>
-                </Grid>
-            </Border>
+            <MediaElement x:Name="mediaElement" UnloadedBehavior="Stop" LoadedBehavior="Manual" Stretch="UniformToFill"/>
         </Grid>
     </Grid>
 </Page>

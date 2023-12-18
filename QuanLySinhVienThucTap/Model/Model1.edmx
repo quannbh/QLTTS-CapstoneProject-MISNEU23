@@ -88,7 +88,7 @@
           </Key>
           <Property Name="MaNoiDungDaoTao" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="MaKhoaDaoTao" Type="varchar" MaxLength="30" />
-          <Property Name="NoiDung" Type="text" />
+          <Property Name="NoiDung" Type="nvarchar(max)" />
           <Property Name="Video" Type="varchar(max)" />
         </EntityType>
         <EntityType Name="tblPhongBan">
@@ -670,7 +670,7 @@
           </Key>
           <Property Name="MaNoiDungDaoTao" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="MaKhoaDaoTao" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-          <Property Name="NoiDung" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="NoiDung" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Video" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="tblKhoaDaoTao" Relationship="TTSModel.FK__tblNoiDun__MaKho__5CD6CB2B" FromRole="tblNoiDungDaoTao" ToRole="tblKhoaDaoTao" />
         </EntityType>

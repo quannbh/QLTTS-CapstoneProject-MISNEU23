@@ -37,6 +37,10 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationIcon>iconkpmg.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
       <HintPath>..\packages\CrystalReports.AxShockwaveFlashObjects.13.0.4003\lib\net40\AxShockwaveFlashObjects.dll</HintPath>
@@ -231,6 +235,7 @@
     <Compile Include="LoginWindow.xaml.cs">
       <DependentUpon>LoginWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Model\BaoCaoLuongModel.cs" />
     <Compile Include="Model\BaoCaoNhiemVuDaoTaoModel.cs" />
     <Compile Include="Model\BaoCaoSoBuoiLamViecModel.cs" />
     <Compile Include="Model\CacDuAn.cs" />
@@ -313,6 +318,9 @@
     </Compile>
     <Compile Include="NS_Page\NS_BaoCaoChamCongPage\XuatBaoCaoChamCong.xaml.cs">
       <DependentUpon>XuatBaoCaoChamCong.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="NS_Page\NS_BaoCaoLuong.xaml.cs">
+      <DependentUpon>NS_BaoCaoLuong.xaml</DependentUpon>
     </Compile>
     <Compile Include="NS_Page\NS_BaoCaoTongHop.xaml.cs">
       <DependentUpon>NS_BaoCaoTongHop.xaml</DependentUpon>
@@ -461,6 +469,7 @@
     <Compile Include="ViewModel\LoginViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\NS_BaoCaoChamCongViewModel.cs" />
+    <Compile Include="ViewModel\NS_BaoCaoLuongViewModel.cs" />
     <Compile Include="ViewModel\NS_BaoCaoTongHopViewModel.cs" />
     <Compile Include="ViewModel\NS_MainViewModel.cs" />
     <Compile Include="ViewModel\QuanLyChungViewModel.cs" />
@@ -507,6 +516,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="NS_Page\NS_BaoCaoChamCongPage\XuatBaoCaoChamCong.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="NS_Page\NS_BaoCaoLuong.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -716,14 +729,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="VideoFileSystem\VideoKhoaHoc\DTC01\" />
-    <Folder Include="VideoFileSystem\VideoKhoaHoc\DTIT01\" />
-    <Folder Include="VideoFileSystem\VideoKhoaHoc\DTIT02\" />
-    <Folder Include="VideoFileSystem\VideoKhoaHoc\DTKT01\" />
-    <Folder Include="VideoFileSystem\VideoKhoaHoc\DTKT02\" />
-    <Folder Include="VideoFileSystem\VideoKhoaHoc\DTNS01\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="Static\Images\800px-KPMG.svg.png" />
   </ItemGroup>
@@ -734,7 +740,15 @@
     <Resource Include="Static\Images\c6e56503cfdd87da299f72dc416023d4.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Static\Icon\iconkpmg.ico" />
+    <Resource Include="iconkpmg.ico" />
     <Content Include="Static\Videos\KPMG OnDemand App Introduction.mp4" />
+    <Content Include="VideoFileSystem\VideoKhoaHoc\DTC01\BaoMatThongTin.mp4" />
+    <Content Include="VideoFileSystem\VideoKhoaHoc\DTIT01\KiemSoatNoiBo.mp4" />
+    <Content Include="VideoFileSystem\VideoKhoaHoc\DTIT02\Oracle.mp4" />
+    <Content Include="VideoFileSystem\VideoKhoaHoc\DTKT01\KiemToanNganHang.mp4" />
+    <Content Include="VideoFileSystem\VideoKhoaHoc\DTKT02\KiemToanNhaNuoc.mp4" />
+    <Content Include="VideoFileSystem\VideoKhoaHoc\DTNS01\TinHocVanPhong.mp4" />
     <Resource Include="Localization\ar.xml" />
     <Resource Include="Localization\be.xml" />
     <Resource Include="Localization\bg.xml" />

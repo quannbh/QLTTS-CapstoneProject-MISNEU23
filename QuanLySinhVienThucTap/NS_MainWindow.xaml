@@ -62,6 +62,13 @@
                                         </i:EventTrigger>
                                     </i:Interaction.Triggers>
                                 </ListBoxItem>
+                                <ListBoxItem Content="Báo cáo lương" FontWeight="Normal" x:Name="ListBoxItem3">
+                                    <i:Interaction.Triggers>
+                                        <i:EventTrigger EventName="MouseLeftButtonUp">
+                                            <i:InvokeCommandAction CommandParameter="{Binding ElementName=NS_mainWindow}" Command="{Binding BaoCaoLuong}"/>
+                                        </i:EventTrigger>
+                                    </i:Interaction.Triggers>
+                                </ListBoxItem>
                             </ListBox>
                         </Expander>
                     </ListBox>

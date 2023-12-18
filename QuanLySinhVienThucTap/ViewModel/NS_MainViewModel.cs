@@ -16,6 +16,8 @@ namespace QuanLySinhVienThucTap.ViewModel
         public static bool isLoaded = false;
         public ICommand LoadedWindowCommand { get; set; }
         public ICommand XuatBaoCao { get; set; }
+
+        public ICommand BaoCaoLuong { get; set; }
         private string _userId;
 
         public string UserId
@@ -125,6 +127,13 @@ namespace QuanLySinhVienThucTap.ViewModel
                 Frame frame = p.gridBaoCao.Children[0] as Frame;
                 while (frame.NavigationService.RemoveBackEntry() != null) { }
                 frame.NavigationService.Navigate(new NS_BaoCaoChamCong(PhongBanUser,UserDepart,UserName)) ;
+            });
+
+            BaoCaoLuong = new RelayCommand<NS_MainWindow>((p) => { return true; }, (p) =>
+            {
+                Frame frame = p.gridBaoCao.Children[0] as Frame;
+                while (frame.NavigationService.RemoveBackEntry() != null) { }
+                frame.NavigationService.Navigate(new NS_BaoCaoLuong());
             });
 
         }
