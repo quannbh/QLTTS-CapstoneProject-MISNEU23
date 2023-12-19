@@ -37,13 +37,13 @@
         </Grid>
         <Grid Grid.Row="1">
             <StackPanel Grid.Column="0" Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Center">
-                <Button Content="Tạo TTS" Command="{Binding TaoMoiTTSCommand}" Width="120" Margin="10 10 50 10" Background="DarkGreen"/>
+               <!-- <Button Content="Tạo TTS" Command="{Binding TaoMoiTTSCommand}" Width="120" Margin="10 10 50 10" Background="DarkGreen"/>
                 <Button Content="Sửa TTS" Command="{Binding SuaTTSCommand}" Width="120" Margin="10 10 50 10" Background="DarkGoldenrod"/>
                 <Button Content="Xóa TTS" Command="{Binding XoaTTSCommand}" Width="120" Margin="10 10 50 10" Background="DarkRed"/>
-                <Button Content="Tạo Dự án" Command="{Binding TaoMoiDACommand}" Width="120" Margin="10 10 50 10" Background="DarkGreen"/>
-                <Button Content="Thêm Dự án" Command="{Binding ThemDACommand}" Width="120" Margin="10 10 50 10" Background="DarkGoldenrod"/>
-                <Button Content="Bỏ thêm DA" Command="{Binding BoThemDACommand}" Width="120" Margin="10 10 50 10" Background="DarkOrange"/>
-                <Button Content="Xóa Dự án" Command="{Binding XoaDACommand}" Width="120" Margin="10 10 50 10" Background="DarkRed"/>
+                <Button Content="Tạo Dự án" Command="{Binding TaoMoiDACommand}" Width="120" Margin="10 10 50 10" Background="DarkGreen"/> -->
+                <Button Content="Thêm Dự án" Command="{Binding ThemDACommand}" Width="200" Margin="550 10 50 10" Background="DarkGreen"/>
+                <Button Content="Bỏ thêm Dự án" Command="{Binding BoThemDACommand}" Width="200" Margin="10 10 50 10" Background="DarkRed"/>
+                <!--<Button Content="Xóa Dự án" Command="{Binding XoaDACommand}" Width="120" Margin="10 10 50 10" Background="DarkRed"/>-->
             </StackPanel>
         </Grid>
         <Border Height="1" Background="Black" VerticalAlignment="Bottom"/>
@@ -58,10 +58,37 @@
                     <ListView ItemsSource="{Binding NhanSuList, Mode=TwoWay}" SelectedItem="{Binding SelectedTTS, Mode=TwoWay}" IsSynchronizedWithCurrentItem="True">
                         <ListView.View>
                             <GridView>
-                                <GridViewColumn Header="Mã Thực tập sinh" DisplayMemberBinding="{Binding MaTTS}" />
-                                <GridViewColumn Header="Tên Thực tập sinh" DisplayMemberBinding="{Binding TenTTS}" />
-                                <GridViewColumn Header="Chức Vụ" DisplayMemberBinding="{Binding MaChucVu}" />
-                                <GridViewColumn Header="Phòng Ban" DisplayMemberBinding="{Binding MaPhongBan}" />
+                                <GridViewColumn Header="Mã Thực tập sinh">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Margin="40,0,0,0" Text="{Binding MaTTS}" TextAlignment="Right" />
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+
+                                <GridViewColumn Header="Tên Thực tập sinh">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Margin="10,0,0,0" Text="{Binding TenTTS}" TextAlignment="Right" />
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+
+                                <GridViewColumn Header="Chức vụ">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Margin="0,0,0,0" Text="{Binding MaChucVu}" TextAlignment="Right" />
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+
+                                <GridViewColumn Header="Phòng ban">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Margin="0,0,0,0" Text="{Binding MaPhongBan}" TextAlignment="Right" />
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
                             </GridView>
                         </ListView.View>
                     </ListView>
@@ -72,8 +99,21 @@
                 <ListView  ItemsSource="{Binding DuAnList}" SelectedItem="{Binding SelectedDA}" HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch">
                     <ListView.View>
                         <GridView>
-                            <GridViewColumn Header="Mã Dự án" Width="auto" DisplayMemberBinding="{Binding MaDA}" />
-                            <GridViewColumn Header="Tên Dự án" Width="auto" DisplayMemberBinding="{Binding TenDA}"/>
+                            <GridViewColumn Header="Mã Dự án" Width="auto">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Margin="30,0,0,0" Text="{Binding MaDA}" TextAlignment="Right" />
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
+
+                            <GridViewColumn Header="Tên Dự án" Width="auto">
+                                <GridViewColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Margin="20,0,0,0" Text="{Binding TenDA}" TextAlignment="Right" />
+                                    </DataTemplate>
+                                </GridViewColumn.CellTemplate>
+                            </GridViewColumn>
                         </GridView>
                     </ListView.View>
                 </ListView>

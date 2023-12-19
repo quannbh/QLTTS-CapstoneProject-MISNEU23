@@ -37,9 +37,8 @@
                     <ListView.View>
                         <GridView>
                             <GridView.Columns>
-                                <GridViewColumn Width="auto" Header="ID" DisplayMemberBinding="{Binding MaDA}"></GridViewColumn>
-                                <GridViewColumn Width="auto" Header="Tên nhân viên" DisplayMemberBinding="{Binding TenDA}"></GridViewColumn>
-                                <GridViewColumn  Width="auto" Header="Phòng ban" DisplayMemberBinding="{Binding PhongBan}"></GridViewColumn>
+                                <GridViewColumn Width="auto" Header="Mã Dự án" DisplayMemberBinding="{Binding MaDA}"></GridViewColumn>
+                                <GridViewColumn Width="auto" Header="Tên Dự án" DisplayMemberBinding="{Binding TenDA}"></GridViewColumn>
                             </GridView.Columns>
                         </GridView>
                     </ListView.View>

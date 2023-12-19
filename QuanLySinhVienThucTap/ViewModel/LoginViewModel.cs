@@ -73,7 +73,6 @@ namespace QuanLySinhVienThucTap.ViewModel
 
                 if (result == MessageBoxResult.Yes)
                 {
-                    //Environment.Exit(0);
                     Application.Current.Shutdown();
                 }
             });

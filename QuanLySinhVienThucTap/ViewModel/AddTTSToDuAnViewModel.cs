@@ -96,7 +96,7 @@ namespace QuanLySinhVienThucTap.ViewModel
         {
             if (_selectedItem == null)
             {
-                MessageBox.Show("Vui lòng chọn nhân sự cần thêm.");
+                MessageBox.Show("Có lỗi xảy ra! Vui lòng chọn Thực tập sinh cần thêm.", "Lỗi!", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
             tblNhanSuDA newTTStoDuAn = new tblNhanSuDA
@@ -113,7 +113,7 @@ namespace QuanLySinhVienThucTap.ViewModel
             {
                 DataProvider.Ins.DB.tblNhanSuDAs.Add(newTTStoDuAn);
                 DataProvider.Ins.DB.SaveChanges();
-                MessageBox.Show("Thêm nhân sự thành công!");
+                MessageBox.Show("Thêm Thực tập sinh thành công!", "Thành công!", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             else
             {

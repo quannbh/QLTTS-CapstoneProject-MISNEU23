@@ -90,6 +90,11 @@ namespace QuanLySinhVienThucTap.ViewModel
 
         public void XuatBaoCaoFunction()
         {
+            if (NgayBatDau > NgayKetThuc)
+            {
+                MessageBox.Show("Có lỗi xảy ra! Vui lòng chọn Ngày bắt đầu trước Ngày Kết thúc", "Lỗi!", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
             XuatBaoCaoTongKet baoCao = new XuatBaoCaoTongKet();
             baoCao.startDate = NgayBatDau;
             baoCao.endDate = NgayKetThuc;

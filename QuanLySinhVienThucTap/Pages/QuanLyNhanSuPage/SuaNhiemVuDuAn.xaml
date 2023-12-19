@@ -56,14 +56,14 @@
                             <DatePicker
             Margin="0 10 0 10"
             VerticalAlignment="Center"
-            materialDesign:HintAssist.Hint="Ngày bắt đầu"
+            materialDesign:HintAssist.Hint="Ngày Bắt đầu"
             Style="{StaticResource MaterialDesignFloatingHintDatePicker}"
             SelectedDate="{Binding NgayBatDau, UpdateSourceTrigger=PropertyChanged}">
                             </DatePicker>
                             <materialDesign:TimePicker
                          Margin="0 10 0 10"
             VerticalAlignment="Center"
-            materialDesign:HintAssist.Hint="Chọn thời gian bắt đầu"
+            materialDesign:HintAssist.Hint="Ngày Bắt đầu"
             Style="{StaticResource MaterialDesignFloatingHintTimePicker}"
             SelectedTime="{Binding NgayBatDau, UpdateSourceTrigger=PropertyChanged}">
                             </materialDesign:TimePicker>

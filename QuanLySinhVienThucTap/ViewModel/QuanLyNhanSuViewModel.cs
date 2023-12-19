@@ -154,7 +154,7 @@ namespace QuanLySinhVienThucTap.ViewModel
                 }
                 else
                 {
-                    MessageBox.Show("Chưa chọn dự án");
+                    MessageBox.Show("Có lỗi xảy ra! Vui lòng chọn Dự án.", "Lỗi!", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             });
 
@@ -167,7 +167,7 @@ namespace QuanLySinhVienThucTap.ViewModel
                 }
                 else
                 {
-                    MessageBox.Show("Chưa chọn dự án");
+                    MessageBox.Show("Có lỗi xảy ra! Vui lòng chọn Dự án.", "Lỗi!", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             });
 
@@ -177,7 +177,7 @@ namespace QuanLySinhVienThucTap.ViewModel
                 {
                     if (SelectedItem == null)
                     {
-                        MessageBox.Show("Vui lòng chọn nhân sự");
+                        MessageBox.Show("Có lỗi xảy ra! Vui lòng chọn Thực tập sinh.", "Lỗi!", MessageBoxButton.OK, MessageBoxImage.Error);
                         return;
                     }
                     AddNhiemVuToDuAn addnhiemvutoduan = new AddNhiemVuToDuAn(maDA, SelectedItem.MaTTS, SelectedItem.TenTTS);
@@ -186,7 +186,7 @@ namespace QuanLySinhVienThucTap.ViewModel
                 }
                 else
                 {
-                    MessageBox.Show("Chưa chọn dự án");
+                    MessageBox.Show("Có lỗi xảy ra! Vui lòng chọn Dự án.", "Lỗi!", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             });
 
@@ -196,7 +196,7 @@ namespace QuanLySinhVienThucTap.ViewModel
                 {
                     if (SelectedNhiemVu == null)
                     {
-                        MessageBox.Show("Vui lòng chọn nhiệm vụ cần cập nhật.");
+                        MessageBox.Show("Có lỗi xảy ra! Vui lòng chọn Nhiệm vụ cần cập nhật.", "Lỗi!", MessageBoxButton.OK, MessageBoxImage.Error);
                         return;
                     }
                     SuaNhiemVuDuAn suaNhiemVu = new SuaNhiemVuDuAn(SelectedNhiemVu);
@@ -205,7 +205,7 @@ namespace QuanLySinhVienThucTap.ViewModel
                 }
                 else
                 {
-                    MessageBox.Show("Chưa chọn dự án");
+                    MessageBox.Show("Có lỗi xảy ra! Vui lòng chọn Dự án.", "Lỗi!", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             });
 
@@ -218,7 +218,7 @@ namespace QuanLySinhVienThucTap.ViewModel
                 }
                 else
                 {
-                    MessageBox.Show("Chưa chọn dự án");
+                    MessageBox.Show("Có lỗi xảy ra! Vui lòng chọn Dự án.", "Lỗi!", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             });
             LocNhiemVuDACommand = new RelayCommand<object>((x) => { return true; }, (x) =>
@@ -229,7 +229,7 @@ namespace QuanLySinhVienThucTap.ViewModel
                 }
                 else
                 {
-                    MessageBox.Show("Chưa chọn dự án");
+                    MessageBox.Show("Có lỗi xảy ra! Vui lòng chọn Dự án.", "Lỗi!", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             });
             BoLocNhiemVuDACommand = new RelayCommand<object>((x) => { return true; }, (x) =>
@@ -241,7 +241,7 @@ namespace QuanLySinhVienThucTap.ViewModel
                 }
                 else
                 {
-                    MessageBox.Show("Chưa chọn dự án");
+                    MessageBox.Show("Có lỗi xảy ra! Vui lòng chọn Dự án.", "Lỗi!", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
             });
         }
@@ -388,7 +388,7 @@ namespace QuanLySinhVienThucTap.ViewModel
 
             if (TTSCanXoa.Any())
             {
-                MessageBoxResult result = MessageBox.Show("Bạn chắc chắn muốn xóa nhân sự khỏi dự án?", "Xác nhận", MessageBoxButton.OKCancel);
+                MessageBoxResult result = MessageBox.Show("Bạn chắc chắn muốn xóa nhân sự khỏi dự án?", "Xác nhận", MessageBoxButton.OKCancel, MessageBoxImage.Warning);
                 if (result == MessageBoxResult.OK)
                 {
                     DataProvider.Ins.DB.tblNhanSuDAs.RemoveRange(TTSCanXoa);
@@ -397,7 +397,7 @@ namespace QuanLySinhVienThucTap.ViewModel
                         DataProvider.Ins.DB.tblNhiemVuDAs.RemoveRange(NhiemVuCanXoa);
                     }
                     DataProvider.Ins.DB.SaveChanges();
-                    MessageBox.Show("Xóa nhân sự thành công!");
+                    MessageBox.Show("Xóa Thực tập sinh thành công!", "Thành công!", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
                 else
                 {
@@ -409,7 +409,7 @@ namespace QuanLySinhVienThucTap.ViewModel
         {
             if (SelectedNhiemVu == null)
             {
-                MessageBox.Show("Chưa chọn nhiệm vụ!");
+                MessageBox.Show("Có lỗi xảy ra! Vui lòng chọn Nhiệm vụ cần xóa.", "Lỗi!", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
 
@@ -420,7 +420,7 @@ namespace QuanLySinhVienThucTap.ViewModel
 
             if (NhiemVuCanXoa.Any())
             {
-                MessageBoxResult result = MessageBox.Show("Bạn chắc chắn muốn xóa nhiệm vụ khỏi dự án?", "Xác nhận", MessageBoxButton.OKCancel);
+                MessageBoxResult result = MessageBox.Show("Bạn chắc chắn muốn xóa nhiệm vụ khỏi dự án?", "Xác nhận", MessageBoxButton.OKCancel, MessageBoxImage.Warning);
 
                 if (result == MessageBoxResult.OK)
                 {
@@ -430,7 +430,7 @@ namespace QuanLySinhVienThucTap.ViewModel
                         DataProvider.Ins.DB.tblNhanXetNhiemVuDAs.RemoveRange(NhanXetCanXoa);
                     }
                     DataProvider.Ins.DB.SaveChanges();
-                    MessageBox.Show("Nhiệm vụ đã được xóa thành công!");
+                    MessageBox.Show("Xóa Nhiệm vụ thành công!", "Thành công!", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
                 else
                 {

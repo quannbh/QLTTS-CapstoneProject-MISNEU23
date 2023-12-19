@@ -199,14 +199,13 @@ namespace QuanLySinhVienThucTap.ViewModel
         {
             TaoMoiTTS newTTS = new TaoMoiTTS(UserDepart);
             newTTS.ShowDialog();
-
         }
 
         public void SuaTTS()
         {
             if (SelectedTTS == null)
             {
-                MessageBox.Show("Vui lòng chọn nhân sự");
+                MessageBox.Show("Có lỗi xảy ra. Vui lòng chọn Thực tập sinh.", "Lỗi!", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
 
@@ -217,7 +216,7 @@ namespace QuanLySinhVienThucTap.ViewModel
         {
             if (SelectedTTS == null)
             {
-                MessageBox.Show("Vui lòng chọn nhân sự!");
+                MessageBox.Show("Có lỗi xảy ra. Vui lòng chọn Thực tập sinh.", "Lỗi!", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
 
@@ -225,17 +224,14 @@ namespace QuanLySinhVienThucTap.ViewModel
 
             var TTSCanXoa = DataProvider.Ins.DB.tblTTS.Where(p => p.MaTTS == maTTSDelete);
 
-            MessageBoxResult result = MessageBox.Show("Bạn chắc chắn muốn xóa nhân sự khỏi dự án?", "Xác nhận", MessageBoxButton.OKCancel);
+            MessageBoxResult result = MessageBox.Show("Bạn chắc chắn muốn xóa Thực tập sinh này? Điều này đồng nghĩa với việc toàn bộ dữ liệu về Thực tập sinh sẽ được xóa hoàn toàn khỏi hệ thống.", "Xác nhận", MessageBoxButton.OKCancel, MessageBoxImage.Warning);
 
-                if (result == MessageBoxResult.OK)
+            if (result == MessageBoxResult.OK)
                 {
-                    // Xóa các bản ghi từ bảng tblDuAn
                     DataProvider.Ins.DB.tblTTS.RemoveRange(TTSCanXoa);
-
-                    // Lưu thay đổi vào cơ sở dữ liệu
                     DataProvider.Ins.DB.SaveChanges();
-                    MessageBox.Show("Xóa thực tập sinh thành công!");
-                }
+                    MessageBox.Show("Xóa Thực tập sinh thành công!", "Thành công!", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
                 else
                 {
                     return;
@@ -274,13 +270,13 @@ namespace QuanLySinhVienThucTap.ViewModel
                 var DACanXoaHere = DataProvider.Ins.DB.tblTrucThuocs.Where(p => p.MaDA == maDADeleteHere);
 
 
-                MessageBoxResult result = MessageBox.Show("Bạn chắc chắn muốn xóa Dự án này khỏi phòng ban?", "Xác nhận", MessageBoxButton.OKCancel);
+                MessageBoxResult result = MessageBox.Show("Bạn chắc chắn muốn xóa Dự án này khỏi Phòng ban?", "Xác nhận", MessageBoxButton.OKCancel, MessageBoxImage.Warning);
 
                 if (result == MessageBoxResult.OK)
                 {
                     DataProvider.Ins.DB.tblTrucThuocs.RemoveRange(DACanXoaHere);
                     DataProvider.Ins.DB.SaveChanges();
-                    MessageBox.Show("Xóa Dự án khỏi phòng ban thành công!");
+                    MessageBox.Show("Xóa Dự án khỏi Phòng ban thành công!", "Thành công!", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
                 else
                 {

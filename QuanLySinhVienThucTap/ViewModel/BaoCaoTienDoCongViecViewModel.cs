@@ -180,7 +180,7 @@ namespace QuanLySinhVienThucTap.ViewModel
             int countDiem = 0;
             if (count == 0)
             {
-                MessageBox.Show("Thực tập sinh không có nhiệm vụ dự án nào trong khoảng thời gian này.");
+                MessageBox.Show("Thực tập sinh không có Nhiệm vụ dự án nào trong khoảng thời gian này.", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Information);
                 return;
             }
             foreach (var item in nhiemVuList)

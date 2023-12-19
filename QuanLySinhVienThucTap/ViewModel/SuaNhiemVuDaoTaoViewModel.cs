@@ -140,17 +140,17 @@ namespace QuanLySinhVienThucTap.ViewModel
                         recordToUpdate.status = "in-progress";
                         DataProvider.Ins.DB.SaveChanges();
                     }
-                    MessageBox.Show("Cập nhật thông tin Nhiệm vụ đào tạo thành công!");
+                    MessageBox.Show("Cập nhật thông tin Nhiệm vụ đào tạo thành công!", "Thành công!", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
                 else
                 {
-                    MessageBox.Show("Có lỗi xảy ra. Ngày bắt đầu phải trước Deadline.", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show("Có lỗi xảy ra! Ngày bắt đầu phải trước Deadline.", "Lỗi!", MessageBoxButton.OK, MessageBoxImage.Error);
                     return;
                 }
             }
             else
             {
-                MessageBox.Show("Có lỗi xảy ra.", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Có lỗi xảy ra!", "Lỗi!", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
     }

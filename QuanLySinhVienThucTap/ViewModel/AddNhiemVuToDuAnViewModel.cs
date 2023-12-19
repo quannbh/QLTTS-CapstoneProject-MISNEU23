@@ -130,7 +130,7 @@ namespace QuanLySinhVienThucTap.ViewModel
         {
             if (NhiemVu == null || NhiemVu.Trim().Length < 5)
             {
-                MessageBox.Show("Vui lòng nhập lại nhiệm vụ. Độ dài nhiệm vụ phải > 5 ký tự.");
+                MessageBox.Show("Có lỗi xảy ra! Nội dung nhiệm vụ quá ngắn, vui lòng nhập trên 5 ký tự.", "Lỗi!", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
             tblNhiemVuDA newnhiemvuduan = new tblNhiemVuDA
@@ -145,7 +145,7 @@ namespace QuanLySinhVienThucTap.ViewModel
             };
 
             
-            MessageBoxResult result = MessageBox.Show("Bạn có chắc chắn muốn thêm nhiệm vụ không?", "Xác nhận", MessageBoxButton.OKCancel);
+            MessageBoxResult result = MessageBox.Show("Bạn có chắc chắn muốn thêm nhiệm vụ không?", "Xác nhận", MessageBoxButton.OKCancel, MessageBoxImage.Warning);
 
             if (result == MessageBoxResult.OK)
             {
@@ -159,12 +159,12 @@ namespace QuanLySinhVienThucTap.ViewModel
                 };
                 DataProvider.Ins.DB.tblNhanXetNhiemVuDAs.Add(newNhanXetDA);
                 DataProvider.Ins.DB.SaveChanges();
-                MessageBox.Show("Thêm nhiệm vụ thành công!");
+                MessageBox.Show("Thêm nhiệm vụ thành công!", "Thành công!", MessageBoxButton.OK, MessageBoxImage.Information);
                 OnPropertyChanged(nameof(QuanLyNhanSuViewModel.ListNhiemVuDuAn));
             }
             else
             {
-                MessageBox.Show("Đã hủy");
+                MessageBox.Show("Đã hủy!", "Hủy!", MessageBoxButton.OK, MessageBoxImage.Information);
             }
         }
     }

@@ -96,7 +96,7 @@ namespace QuanLySinhVienThucTap.ViewModel
         {
             if (_selectedItem == null)
             {
-                MessageBox.Show("Vui lòng chọn Dự án cần thêm.");
+                MessageBox.Show("Có lỗi xảy ra! Vui lòng chọn Dự án cần thêm vào Phòng ban.", "Lỗi!", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
             tblTrucThuoc newTT = new tblTrucThuoc
@@ -113,7 +113,7 @@ namespace QuanLySinhVienThucTap.ViewModel
             {
                 DataProvider.Ins.DB.tblTrucThuocs.Add(newTT);
                 DataProvider.Ins.DB.SaveChanges();
-                MessageBox.Show("Thêm Dự án vào phòng ban thành công!");
+                MessageBox.Show("Thêm Dự án vào Phòng ban thành công.", "Thành công!", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             else
             {

@@ -171,33 +171,29 @@ namespace QuanLySinhVienThucTap.ViewModel
             {
                 if (SelectedDuAn == null)
                 {
-                    MessageBox.Show("Vui lòng chọn dự án!");
+                    MessageBox.Show("Có lỗi xảy ra! Vui lòng chọn Dự án.", "Lỗi!", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
                 }
-                else if(SelectedNhiemVu == null) {
-                    MessageBox.Show("Vui lòng chọn nhiệm vụ cần nhận xét!");
+                if(SelectedNhiemVu == null) {
+                    MessageBox.Show("Có lỗi xảy ra! Vui lòng chọn Nhiệm vụ cần nhận xét.", "Lỗi!", MessageBoxButton.OK, MessageBoxImage.Error);
+                    return;
                 }
-                else
-                {
                     AddNhanXet();
-                }
             });
             LocTaskTTS = new RelayCommand<object>((p) => { return true; }, (p) =>
             {
                 if (SelectedDuAn == null)
                 {
-                    MessageBox.Show("Vui lòng chọn dự án!");
+                    MessageBox.Show("Có lỗi xảy ra! Vui lòng chọn Dự án.", "Lỗi!", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
                 else if (SelectedNhiemVu == null)
                 {
-                    MessageBox.Show("Vui lòng chọn một nhiệm vụ của thực tập sinh cần lọc.");
+                    MessageBox.Show("Có lỗi xảy ra! Vui lòng chọn Nhiệm vụ bất kỳ của Thực tập sinh cần lọc.", "Lỗi!", MessageBoxButton.OK, MessageBoxImage.Error);
                 }
-                else
-                {
                     var idNhiemVu = int.Parse(SelectedNhiemVu?.MaNhiemVuDA);
                     var idTTS = DataProvider.Ins.DB.tblNhiemVuDAs.Where(x => x.MaNhiemVuDA == idNhiemVu).Select(z => z.MaTTS).First();
                     maDA = SelectedDuAn.MaDA;
                     LocNhiemVu(maDA, idTTS);
-                }
             });
         }
 

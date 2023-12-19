@@ -101,15 +101,49 @@
                                 <ListView.View>
                                     <GridView>
                                         <GridView.Columns>
-                                            <GridViewColumn Width="auto" Header="STT" DisplayMemberBinding="{Binding STT}"></GridViewColumn>
-                                            <GridViewColumn Width="auto" Header="Mã Nhiệm vụ" DisplayMemberBinding="{Binding MaNhiemVuDaoTao}"></GridViewColumn>
-                                            <GridViewColumn Width="auto" Header="Tên Thực tập sinh" DisplayMemberBinding="{Binding TenTTS}"></GridViewColumn>
-                                            <GridViewColumn Width="auto" Header="Mã Thực tập sinh" DisplayMemberBinding="{Binding MaTTS}"></GridViewColumn>
-                                            <GridViewColumn Width="auto" Header="Deadline"  DisplayMemberBinding="{Binding Deadline}"></GridViewColumn>
+                                            <GridViewColumn Width="auto" Header="STT">
+                                                <GridViewColumn.CellTemplate>
+                                                    <DataTemplate>
+                                                        <TextBlock Margin="20,0,0,0" Text="{Binding STT}" TextAlignment="Right" />
+                                                    </DataTemplate>
+                                                </GridViewColumn.CellTemplate>
+                                            </GridViewColumn>
+
+                                            <GridViewColumn Width="auto" Header="Mã Nhiệm vụ">
+                                                <GridViewColumn.CellTemplate>
+                                                    <DataTemplate>
+                                                        <TextBlock Margin="40,0,0,0" Text="{Binding MaNhiemVuDaoTao}" TextAlignment="Right" />
+                                                    </DataTemplate>
+                                                </GridViewColumn.CellTemplate>
+                                            </GridViewColumn>
+
+                                            <GridViewColumn Width="auto" Header="Tên Thực tập sinh">
+                                                <GridViewColumn.CellTemplate>
+                                                    <DataTemplate>
+                                                        <TextBlock Margin="20,0,0,0" Text="{Binding TenTTS}" TextAlignment="Right" />
+                                                    </DataTemplate>
+                                                </GridViewColumn.CellTemplate>
+                                            </GridViewColumn>
+
+                                            <GridViewColumn Width="auto" Header="Mã Thực tập sinh">
+                                                <GridViewColumn.CellTemplate>
+                                                    <DataTemplate>
+                                                        <TextBlock Margin="50,0,0,0" Text="{Binding MaTTS}" TextAlignment="Right" />
+                                                    </DataTemplate>
+                                                </GridViewColumn.CellTemplate>
+                                            </GridViewColumn>
+
+                                            <GridViewColumn Width="auto" Header="Deadline">
+                                                <GridViewColumn.CellTemplate>
+                                                    <DataTemplate>
+                                                        <TextBlock Margin="10,0,0,0" Text="{Binding Deadline}" TextAlignment="Right" />
+                                                    </DataTemplate>
+                                                </GridViewColumn.CellTemplate>
+                                            </GridViewColumn>
                                             <GridViewColumn Width="auto" Header="Tiến độ">
                                                 <GridViewColumn.CellTemplate>
                                                     <DataTemplate>
-                                                        <TextBlock Text="{Binding TienDo}">
+                                                        <TextBlock Margin="15,0,0,0" Text="{Binding TienDo}">
                                                             <TextBlock.Style>
                                                                 <Style TargetType="TextBlock">
                                                                     <Style.Triggers>

@@ -167,7 +167,7 @@ namespace QuanLySinhVienThucTap.ViewModel
             var nvDone = nhiemVuDaoTao.Count(x => x.status == "done" || x.status == "approved");
             if (count == 0)
             {
-                MessageBox.Show("Thực tập sinh không có nhiệm vụ đào tạo nào trong khoảng thời gian này.");
+                MessageBox.Show("Thực tập sinh không có Nhiệm vụ đào tạo nào trong khoảng thời gian này.", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Information);
                 return;
             }
             int i = 1;

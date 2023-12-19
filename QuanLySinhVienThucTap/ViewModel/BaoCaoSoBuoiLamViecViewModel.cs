@@ -174,7 +174,7 @@ namespace QuanLySinhVienThucTap.ViewModel
             string tenTTS = DataProvider.Ins.DB.tblTTS.Where(x => x.MaTTS == SelectedTTS.MaTTS).Select(x => x.TenTTS).SingleOrDefault();
             if (count == 0)
             {
-                MessageBox.Show("Thực tập sinh không chấm công trong thời gian này.");
+                MessageBox.Show("Thực tập sinh không chấm công trong khoảng thời gian này.", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Information);
                 return;
             }
             int i = 1;
