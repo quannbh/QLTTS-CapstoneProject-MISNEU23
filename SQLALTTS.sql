@@ -159,15 +159,15 @@ MaTTS varchar(30) foreign key references tblTTS(MaTTS) ON DELETE CASCADE,
 NgayChamCong Datetime,
 )
 
-insert into tblChamCong(MaTTS,NgayChamCong) values ('IT01', '2023-10-27 09:01:00')
-insert into tblChamCong(MaTTS,NgayChamCong) values ('IT01', '2023-10-30 09:01:00')
-insert into tblChamCong(MaTTS,NgayChamCong) values ('IT01', '2023-11-01 09:01:00')
-insert into tblChamCong(MaTTS,NgayChamCong) values ('IT01', '2023-11-02 09:01:00')
-insert into tblChamCong(MaTTS,NgayChamCong) values ('IT01', '2023-11-03 09:01:00')
-insert into tblChamCong(MaTTS,NgayChamCong) values ('IT01', '2023-11-05 09:01:00')
-insert into tblChamCong(MaTTS,NgayChamCong) values ('IT01', '2023-11-06 09:01:00')
-insert into tblChamCong(MaTTS,NgayChamCong) values ('IT01', '2023-11-07 09:01:00')
-insert into tblChamCong(MaTTS,NgayChamCong) values ('IT01', '2023-11-08 09:01:00')
+insert into tblChamCong(MaTTS,NgayChamCong) values ('IT02', '2023-10-27 08:01:00')
+insert into tblChamCong(MaTTS,NgayChamCong) values ('IT02', '2023-10-30 08:01:00')
+insert into tblChamCong(MaTTS,NgayChamCong) values ('IT02', '2023-11-01 08:01:00')
+insert into tblChamCong(MaTTS,NgayChamCong) values ('IT02', '2023-11-02 08:01:00')
+insert into tblChamCong(MaTTS,NgayChamCong) values ('IT02', '2023-11-03 08:01:00')
+insert into tblChamCong(MaTTS,NgayChamCong) values ('IT02', '2023-11-05 08:01:00')
+insert into tblChamCong(MaTTS,NgayChamCong) values ('IT02', '2023-11-06 08:01:00')
+insert into tblChamCong(MaTTS,NgayChamCong) values ('IT02', '2023-11-07 08:01:00')
+insert into tblChamCong(MaTTS,NgayChamCong) values ('IT02', '2023-11-08 08:01:00')
 
 
 

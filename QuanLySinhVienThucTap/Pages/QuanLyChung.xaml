@@ -42,7 +42,7 @@
                 <Button Content="Xóa TTS" Command="{Binding XoaTTSCommand}" Width="120" Margin="10 10 50 10" Background="DarkRed"/>
                 <Button Content="Tạo Dự án" Command="{Binding TaoMoiDACommand}" Width="120" Margin="10 10 50 10" Background="DarkGreen"/> -->
                 <Button Content="Thêm Dự án" Command="{Binding ThemDACommand}" Width="200" Margin="550 10 50 10" Background="DarkGreen"/>
-                <Button Content="Bỏ thêm Dự án" Command="{Binding BoThemDACommand}" Width="200" Margin="10 10 50 10" Background="DarkRed"/>
+                <Button Content="Xóa Dự án" Command="{Binding BoThemDACommand}" Width="200" Margin="10 10 50 10" Background="DarkRed"/>
                 <!--<Button Content="Xóa Dự án" Command="{Binding XoaDACommand}" Width="120" Margin="10 10 50 10" Background="DarkRed"/>-->
             </StackPanel>
         </Grid>

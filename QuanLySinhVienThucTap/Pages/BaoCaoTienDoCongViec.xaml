@@ -127,7 +127,7 @@
                                     </GridViewColumn.CellTemplate>
                                 </GridViewColumn>
 
-                                <GridViewColumn Width="auto" Header="Ngày bắt đầu">
+                                <GridViewColumn Width="auto" Header="Ngày Bắt đầu">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
                                             <!-- Định dạng Ngày bắt đầu nếu cần -->

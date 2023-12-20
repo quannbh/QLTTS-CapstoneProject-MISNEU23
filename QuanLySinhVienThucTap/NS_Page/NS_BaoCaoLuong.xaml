@@ -55,7 +55,7 @@
                         <StackPanel Grid.Column="1" Margin="10">
                             <DatePicker
                 VerticalAlignment="Center"
-                materialDesign:HintAssist.Hint="Ngày bắt đầu"
+                materialDesign:HintAssist.Hint="Ngày Bắt đầu"
                 Style="{StaticResource MaterialDesignFloatingHintDatePicker}"
                 SelectedDate="{Binding NgayBatDau, UpdateSourceTrigger=PropertyChanged}">
                             </DatePicker>
@@ -63,7 +63,7 @@
                         <StackPanel Grid.Column="2" Margin="10">
                             <DatePicker
                 VerticalAlignment="Center"
-                materialDesign:HintAssist.Hint="Deadline"
+                materialDesign:HintAssist.Hint="Ngày Kết thúc"
                 Style="{StaticResource MaterialDesignFloatingHintDatePicker}"
                 SelectedDate="{Binding NgayKetThuc, UpdateSourceTrigger=PropertyChanged}">
                             </DatePicker>

@@ -90,6 +90,8 @@ namespace QuanLySinhVienThucTap.ViewModel
         public ICommand LoadedCommand { get; set; }
 
         public ICommand XuatBaoCaoCommand { get; set; }
+
+        public ICommand CancelCommand { get; set; }
         public NS_BaoCaoLuongViewModel()
         {
             LoadedCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
@@ -118,6 +120,12 @@ namespace QuanLySinhVienThucTap.ViewModel
                 XuatBaoCao();
             });
 
+            CancelCommand = new RelayCommand<object>((p) => { return true; }, (p) =>
+            {
+                SelectedPhongBan = null;
+                NgayBatDau = null;
+                NgayKetThuc = null;
+            });
         }
 
         public void LoadPage()

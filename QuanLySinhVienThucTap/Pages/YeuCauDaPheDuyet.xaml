@@ -41,17 +41,67 @@
                     <ListView.View>
                         <GridView>
                             <GridView.Columns>
-                                <GridViewColumn Width="auto" Header="STT" DisplayMemberBinding="{Binding STT}"></GridViewColumn>
-                                <GridViewColumn Width="auto" Header="Mã Yêu cầu" DisplayMemberBinding="{Binding MaYeuCau}"></GridViewColumn>
-                                <GridViewColumn Width="auto" Header="Tên Thực tập sinh" DisplayMemberBinding="{Binding TenTTS}"></GridViewColumn>
-                                <GridViewColumn Width="auto" Header="Mã TTS" DisplayMemberBinding="{Binding MaTTS}"></GridViewColumn>
-                                <GridViewColumn Width="auto" Header="Ngày tạo"  DisplayMemberBinding="{Binding NgayTao}"></GridViewColumn>
-                                <GridViewColumn  Width="auto" Header="Yêu cầu" DisplayMemberBinding="{Binding YeuCau}"></GridViewColumn>
-                                <GridViewColumn  Width="auto" Header="Ngày hiệu lực" DisplayMemberBinding="{Binding NgayHieuLuc}"></GridViewColumn>
+                                <GridViewColumn Width="auto" Header="STT">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Margin="20,0,0,0" Text="{Binding STT}" TextAlignment="Right" />
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+
+                                <GridViewColumn Width="auto" Header="Mã Yêu cầu">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Margin="30,0,0,0" Text="{Binding MaYeuCau}" TextAlignment="Right" />
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+
+                                <GridViewColumn Width="auto" Header="Tên Thực tập sinh">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Margin="20,0,0,0" Text="{Binding TenTTS}" TextAlignment="Right" />
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+
+                                <GridViewColumn Width="auto" Header="Mã Thực tập sinh">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Margin="50,0,0,0" Text="{Binding MaTTS}" TextAlignment="Right" />
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+
+                                <GridViewColumn Width="auto" Header="Ngày tạo">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <!-- Định dạng Ngày tạo nếu cần -->
+                                            <TextBlock Margin="0,0,0,0" Text="{Binding NgayTao}" TextAlignment="Right" />
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+
+                                <GridViewColumn Width="auto" Header="Yêu cầu">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Margin="10,0,0,0" Text="{Binding YeuCau}" TextAlignment="Right" />
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+
+                                <GridViewColumn Width="auto" Header="Ngày hiệu lực">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <!-- Định dạng Ngày hiệu lực nếu cần -->
+                                            <TextBlock Margin="0,0,0,0" Text="{Binding NgayHieuLuc}" TextAlignment="Right" />
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
                                 <GridViewColumn Header="Status">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
-                                            <TextBlock Text="{Binding Status}">
+                                            <TextBlock Margin="15,0,0,0" Text="{Binding Status}">
                                                 <TextBlock.Style>
                                                     <Style TargetType="TextBlock">
                                                         <Style.Triggers>

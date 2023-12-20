@@ -4,22 +4,22 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="6302418a45e246df8872cae025b221ad" Name="Diagram1" ZoomLevel="72">
-        <EntityTypeShape EntityType="TTSModel.tblChamCong" Width="1.5" PointX="8.25" PointY="16.125" />
+      <Diagram DiagramId="6302418a45e246df8872cae025b221ad" Name="Diagram1" ZoomLevel="37">
+        <EntityTypeShape EntityType="TTSModel.tblChamCong" Width="1.5" PointX="8.25" PointY="22.75" />
         <EntityTypeShape EntityType="TTSModel.tblChucVu" Width="1.5" PointX="0.75" PointY="8.375" />
         <EntityTypeShape EntityType="TTSModel.tblDuAn" Width="1.5" PointX="0.75" PointY="14.25" />
         <EntityTypeShape EntityType="TTSModel.tblKhoaDaoTao" Width="1.5" PointX="6" PointY="7.375" />
-        <EntityTypeShape EntityType="TTSModel.tblNguoiPheDuyet" Width="1.5" PointX="10.5" PointY="13.625" />
-        <EntityTypeShape EntityType="TTSModel.tblNhanSuDA" Width="1.5" PointX="11.25" PointY="10.25" />
-        <EntityTypeShape EntityType="TTSModel.tblNhanXetNhiemVuDA" Width="1.5" PointX="10.5" PointY="7.25" />
-        <EntityTypeShape EntityType="TTSModel.tblNhiemVuDA" Width="1.5" PointX="8.25" PointY="10.875" />
-        <EntityTypeShape EntityType="TTSModel.tblNhiemVuDaoTao" Width="1.5" PointX="8.25" PointY="7" />
-        <EntityTypeShape EntityType="TTSModel.tblNoiDungDaoTao" Width="1.5" PointX="8.25" PointY="3.25" />
+        <EntityTypeShape EntityType="TTSModel.tblNguoiPheDuyet" Width="1.5" PointX="10.5" PointY="14" />
+        <EntityTypeShape EntityType="TTSModel.tblNhanSuDA" Width="1.5" PointX="8.25" PointY="8.25" />
+        <EntityTypeShape EntityType="TTSModel.tblNhanXetNhiemVuDA" Width="1.5" PointX="13.5" PointY="10.25" />
+        <EntityTypeShape EntityType="TTSModel.tblNhiemVuDA" Width="1.5" PointX="11.25" PointY="9.875" />
+        <EntityTypeShape EntityType="TTSModel.tblNhiemVuDaoTao" Width="1.5" PointX="8.25" PointY="11" />
+        <EntityTypeShape EntityType="TTSModel.tblNoiDungDaoTao" Width="1.5" PointX="8.25" PointY="5.25" />
         <EntityTypeShape EntityType="TTSModel.tblPhongBan" Width="1.5" PointX="0.75" PointY="11.25" />
         <EntityTypeShape EntityType="TTSModel.tblQL" Width="1.5" PointX="3" PointY="8" />
         <EntityTypeShape EntityType="TTSModel.tblTrucThuoc" Width="1.5" PointX="3" PointY="11.25" />
         <EntityTypeShape EntityType="TTSModel.tblTT" Width="1.5" PointX="6" PointY="10.625" />
-        <EntityTypeShape EntityType="TTSModel.tblYeuCau" Width="1.5" PointX="8.25" PointY="18.75" />
+        <EntityTypeShape EntityType="TTSModel.tblYeuCau" Width="1.5" PointX="8.25" PointY="19.5" />
         <AssociationConnector Association="TTSModel.FK__tblChamCo__MaTTS__5070F446" />
         <AssociationConnector Association="TTSModel.FK__tblQL__MaChucVu__2D27B809" />
         <AssociationConnector Association="TTSModel.FK__tblTTS__MaChucVu__29572725" />

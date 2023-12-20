@@ -206,7 +206,7 @@ namespace QuanLySinhVienThucTap.ViewModel
 
             TongSo = count;
             TiLeHoanThanh = Math.Round(((double) nvDone / count)*100, 2);
-            SoDiemTrungBinh = countDiem != 0 ? SoDiemTrungBinh / countDiem : 0;
+            SoDiemTrungBinh = countDiem != 0 ? Math.Round(SoDiemTrungBinh / countDiem,2) : 0;
         }
     }
 }

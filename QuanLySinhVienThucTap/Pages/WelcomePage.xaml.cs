@@ -21,7 +21,7 @@ namespace QuanLySinhVienThucTap.Pages
         public WelcomePage()
         {
             InitializeComponent();
-            string videoPath = "C:\\QLTTS\\QuanLySinhVienThucTap\\Static\\Videos\\KPMG OnDemand App Introduction.mp4";
+            string videoPath = "..\\..\\Static\\Videos\\KPMG OnDemand App Introduction.mp4";
             mediaElement.Source = new Uri(videoPath, UriKind.RelativeOrAbsolute);
             Loaded += WelcomePage_Loaded;
             mediaElement.MediaEnded += MediaElement_MediaEnded;
@@ -46,7 +46,5 @@ namespace QuanLySinhVienThucTap.Pages
             };
             timer.Start();
         }
-
-
     }
     }

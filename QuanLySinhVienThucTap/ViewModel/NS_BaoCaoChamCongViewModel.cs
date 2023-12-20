@@ -172,25 +172,24 @@ namespace QuanLySinhVienThucTap.ViewModel
         {
             if (SelectedPhongBan == null)
             {
-                MessageBox.Show("Vui lòng lựa chọn phòng ban cần xuất báo cáo.");
+                MessageBox.Show("Có lỗi xảy ra! Vui lòng chọn Phòng Ban cần xuất báo cáo!", "Lỗi!", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
+            if (SelectedTTS == null)
+            {
+                MessageBox.Show("Có lỗi xảy ra! Vui lòng chọn Thực tập sinh cần xuất báo cáo!", "Lỗi!", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
             XuatBaoCaoChamCong baoCaoChamCong = new XuatBaoCaoChamCong();
             baoCaoChamCong.startDate = NgayBatDau;
             baoCaoChamCong.endDate = NgayKetThuc;
             baoCaoChamCong.maPhongBan = SelectedPhongBan.MaPhongBan;
             baoCaoChamCong.PhongBan = SelectedPhongBan.TenPhongBan;
             baoCaoChamCong.personPD = User;
-            if (SelectedTTS != null)
-            {
-                baoCaoChamCong.MaTTSreport = SelectedTTS.MaTTS;
-                baoCaoChamCong.nameTTS = SelectedTTS.TenTTS;
-            }
-            else
-            {
-                baoCaoChamCong.MaTTSreport = null;
-                baoCaoChamCong.nameTTS = null;
-            }
+            baoCaoChamCong.MaTTSreport = SelectedTTS.MaTTS;
+            baoCaoChamCong.nameTTS = SelectedTTS.TenTTS;
+
             baoCaoChamCong.ShowDialog();
         }
     }
