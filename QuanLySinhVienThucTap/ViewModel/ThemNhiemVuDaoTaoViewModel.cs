@@ -157,6 +157,12 @@ namespace QuanLySinhVienThucTap.ViewModel
                 MessageBoxResult result = MessageBox.Show("Có lỗi xảy ra. Vui lòng chọn thực tập sinh.", "Cảnh báo",MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
+
+            if (NgayBatDau >= Deadline)
+            {
+                MessageBox.Show("Có lỗi xảy ra. Ngày Bắt đầu phải trước Deadline.", "Cảnh báo", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
             MessageBoxResult msgresult = MessageBox.Show($"Bạn có chắc chắn muốn thêm nhiệm vụ đào tạo cho {SelectedTTS.TenTTS} không?", "Xác nhận", MessageBoxButton.OKCancel);
 
             if (msgresult == MessageBoxResult.OK)

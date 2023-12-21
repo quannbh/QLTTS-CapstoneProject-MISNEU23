@@ -264,11 +264,11 @@ namespace QuanLySinhVienThucTap.ViewModel
 
         public void AddNhanXet()
         {
-            if (NhanXetNhiemVu == null || NhanXetNhiemVu.Trim().Length < 10)
+           /* if (NhanXetNhiemVu == null || NhanXetNhiemVu.Trim().Length < 10)
             {
                 MessageBox.Show("Nhận xét quá ngắn. Vui lòng nhập lại.");
                 return;
-            } else if (DanhGia == 0)
+            } else*/ if (DanhGia == 0)
             {
                 MessageBox.Show("Vui lòng chọn sao đánh giá.");
                 return;

@@ -132,7 +132,6 @@
                                                     </DataTemplate>
                                                 </GridViewColumn.CellTemplate>
                                             </GridViewColumn>
-
                                             <GridViewColumn Width="auto" Header="Deadline">
                                                 <GridViewColumn.CellTemplate>
                                                     <DataTemplate>
@@ -166,7 +165,7 @@
                                                     </DataTemplate>
                                                 </GridViewColumn.CellTemplate>
                                             </GridViewColumn>
-                                            <GridViewColumn Width="Auto" Header="Duyệt hoàn thành">
+                                            <!-- <GridViewColumn Width="Auto" Header="Duyệt hoàn thành">
                                                 <GridViewColumn.CellTemplate>
                                                     <DataTemplate>
                                                         <StackPanel Orientation="Horizontal">
@@ -182,7 +181,7 @@
                                                                     </Style>
                                                                 </Button.Style>
                                                             </Button>
-                                                            <Image Width="20" Margin="30 0 0 0" Height="20" Source="{Binding TienDo, Converter={StaticResource TienDoToImageConverter}}">
+                                                           <Image Width="20" Margin="30 0 0 0" Height="20" Source="{Binding TienDo, Converter={StaticResource TienDoToImageConverter}}">
                                                                 <Image.Style>
                                                                     <Style TargetType="Image">
                                                                         <Setter Property="Visibility" Value="Collapsed"/>
@@ -197,7 +196,7 @@
                                                         </StackPanel>
                                                     </DataTemplate>
                                                 </GridViewColumn.CellTemplate>
-                                            </GridViewColumn>
+                                            </GridViewColumn>-->
                                         </GridView.Columns>
                                     </GridView>
                                 </ListView.View>
