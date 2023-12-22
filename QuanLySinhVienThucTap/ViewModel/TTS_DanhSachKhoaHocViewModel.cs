@@ -119,7 +119,7 @@ namespace QuanLySinhVienThucTap.ViewModel
         {
             if (SelectedKhoaHoc == null)
             {
-                MessageBox.Show("Vui lòng chọn nhiệm vụ đào tạo.");
+                MessageBox.Show("Có lỗi xảy ra! Vui lòng chọn nhiệm vụ đào tạo.", "Lỗi!", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
 
@@ -131,7 +131,7 @@ namespace QuanLySinhVienThucTap.ViewModel
                 var hoanthanh = DataProvider.Ins.DB.tblNhiemVuDaoTaos.SingleOrDefault(p => p.MaNhiemVuDaoTao == maNhiemVuKhoaHoc);
                 hoanthanh.status = "done";
                 DataProvider.Ins.DB.SaveChanges();
-                MessageBox.Show("Cập nhật thành công.");
+                MessageBox.Show("Cập nhật thành công!", "Thành công!", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             else
             {
@@ -143,7 +143,7 @@ namespace QuanLySinhVienThucTap.ViewModel
         {
             if (SelectedKhoaHoc == null)
             {
-                MessageBox.Show("Vui lòng chọn nhiệm vụ đào tạo.");
+                MessageBox.Show("Có lỗi xảy ra! Vui lòng chọn nhiệm vụ đào tạo.", "Lỗi!", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
             TTS_ChiTietKhoaHoc chiTietKhoaHoc = new TTS_ChiTietKhoaHoc(SelectedKhoaHoc.MaKhoaDaoTao);

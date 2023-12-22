@@ -123,12 +123,12 @@ namespace QuanLySinhVienThucTap.ViewModel
         {
             if (count == 1)
             {
-                MessageBox.Show("Bạn đã duyệt hết toàn bộ yêu cầu.");
+                MessageBox.Show("Đã phê duyệt hết toàn bộ yêu cầu.", "Cảnh báo", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
             else if (SelectedYeuCauChoDuyet == null)
             {
-                MessageBox.Show("Vui lòng chọn yêu cầu cần phê duyệt.");
+                MessageBox.Show("Có lỗi xảy ra! Vui lòng chọn yêu cầu phê duyệt.", "Lỗi!", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
 
@@ -158,13 +158,13 @@ namespace QuanLySinhVienThucTap.ViewModel
         {
             if (count == 1)
             {
-                MessageBox.Show("Bạn đã duyệt hết toàn bộ yêu cầu.");
+                MessageBox.Show("Đã phê duyệt hết toàn bộ yêu cầu.", "Cảnh báo", MessageBoxButton.OK, MessageBoxImage.Warning);
                 return;
             }
 
             else if (SelectedYeuCauChoDuyet == null)
             {
-                MessageBox.Show("Vui lòng chọn yêu cầu.");
+                MessageBox.Show("Có lỗi xảy ra! Vui lòng chọn yêu cầu phê duyệt.", "Lỗi!", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
 
@@ -184,7 +184,7 @@ namespace QuanLySinhVienThucTap.ViewModel
                 };
                 DataProvider.Ins.DB.tblNguoiPheDuyets.Add(nguoiDuyet);
                 DataProvider.Ins.DB.SaveChanges();
-                MessageBox.Show("Thành công.");
+                MessageBox.Show("Phê duyệt thành công!", "Thành công!", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             else
             {

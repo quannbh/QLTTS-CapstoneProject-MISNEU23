@@ -179,7 +179,7 @@ namespace QuanLySinhVienThucTap.ViewModel
                 DataProvider.Ins.DB.tblNhiemVuDaoTaos.Add(newNhiemVu);
                 DataProvider.Ins.DB.SaveChanges();
 
-                MessageBox.Show($"Thêm Nhiệm vụ Đào tạo cho {SelectedTTS.TenTTS} thành công!");
+                MessageBox.Show($"Thêm Nhiệm vụ Đào tạo cho {SelectedTTS.TenTTS} thành công!", "Thành công!", MessageBoxButton.OK, MessageBoxImage.Information);
             } else
             {
                 return;

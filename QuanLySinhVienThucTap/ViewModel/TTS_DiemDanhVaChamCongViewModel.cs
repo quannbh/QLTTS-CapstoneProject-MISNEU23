@@ -112,7 +112,7 @@ namespace QuanLySinhVienThucTap.ViewModel
                 };
                 DataProvider.Ins.DB.tblChamCongs.Add(newChamCong);
                 DataProvider.Ins.DB.SaveChanges();
-                MessageBox.Show("Chấm công thành công.");
+                MessageBox.Show("Chấm công thành công!", "Thành công!", MessageBoxButton.OK, MessageBoxImage.Information);
             }
 
         }

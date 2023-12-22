@@ -106,7 +106,7 @@ namespace QuanLySinhVienThucTap.ViewModel
             {
                 if(SelectedDuAn == null)
                 {
-                    MessageBox.Show("Vui lòng chọn dự án.");
+                    MessageBox.Show("Có lỗi xảy ra! Vui lòng chọn dự án.", "Lỗi!", MessageBoxButton.OK, MessageBoxImage.Error);
                     return;
                 }
                 HoanThanhNhiemVu();
@@ -117,7 +117,7 @@ namespace QuanLySinhVienThucTap.ViewModel
             {
                 if (SelectedDuAn == null)
                 {
-                    MessageBox.Show("Vui lòng chọn dự án.");
+                    MessageBox.Show("Có lỗi xảy ra! Vui lòng chọn dự án.", "Lỗi!", MessageBoxButton.OK, MessageBoxImage.Error);
                     return;
                 }
                 XemChiTiet();
@@ -174,7 +174,7 @@ namespace QuanLySinhVienThucTap.ViewModel
         {
           if (SelectedNhiemVu == null)
             {
-                MessageBox.Show("Vui lòng chọn nhiệm vụ.");
+                MessageBox.Show("Có lỗi xảy ra! Vui lòng chọn nhiệm vụ đã hoàn thành.", "Lỗi!", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
 
@@ -188,7 +188,7 @@ namespace QuanLySinhVienThucTap.ViewModel
                 {
                     hoanThanhNhiemVu.status = "done";
                     DataProvider.Ins.DB.SaveChanges();
-                    MessageBox.Show("Cập nhật thành công.");
+                    MessageBox.Show("Cập nhật nhiệm vụ thành công!", "Thành công!", MessageBoxButton.OK, MessageBoxImage.Information);
                 }
                 else
                 {
@@ -197,7 +197,7 @@ namespace QuanLySinhVienThucTap.ViewModel
             }
             else
             {
-                MessageBox.Show("Vui lòng chọn nhiệm vụ đang làm.");
+                MessageBox.Show("Có lỗi xảy ra! Vui lòng chọn nhiệm vụ đang thực hiện (in-progress).", "Lỗi!", MessageBoxButton.OK, MessageBoxImage.Error);
             }
             
         }
@@ -206,7 +206,7 @@ namespace QuanLySinhVienThucTap.ViewModel
         {
             if (SelectedNhiemVu == null)
             {
-                MessageBox.Show("Vui lòng chọn nhiệm vụ.");
+                MessageBox.Show("Có lỗi xảy ra! Vui lòng chọn nhiệm vụ cần học.", "Lỗi!", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
             ChiTietNhiemVu newChiTietNhiemVu = new ChiTietNhiemVu(SelectedNhiemVu.MaNhiemVuDA);

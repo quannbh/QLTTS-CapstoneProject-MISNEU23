@@ -129,7 +129,7 @@ namespace QuanLySinhVienThucTap.ViewModel
         {
             if (SelectedYeuCau == null)
             {
-                MessageBox.Show("Vui lòng chọn yêu cầu cần hủy bỏ.");
+                MessageBox.Show("Có lỗi xảy ra! Vui lòng chọn yêu cầu cần hủy bỏ.", "Lỗi!", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
 
@@ -147,7 +147,7 @@ namespace QuanLySinhVienThucTap.ViewModel
                         DataProvider.Ins.DB.tblYeuCaus.Remove(yeuCauCanHuy);
                         DataProvider.Ins.DB.SaveChanges();
                     }
-                    MessageBox.Show("Hủy bỏ yêu cầu thành công.");
+                    MessageBox.Show("Hủy bỏ yêu cầu thành công!", "Thành công!", MessageBoxButton.OK, MessageBoxImage.Information);
                     LoadYeuCau();
                 }
                 else
@@ -157,7 +157,7 @@ namespace QuanLySinhVienThucTap.ViewModel
             }
             else
             {
-                MessageBox.Show("Yêu cầu đã được kiểm duyệt. Không thể hủy bỏ.", "Lỗi", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Có lỗi xảy ra! Yêu cầu đã được kiểm duyệt, không thể hủy bỏ.", "Lỗi!", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
     }
