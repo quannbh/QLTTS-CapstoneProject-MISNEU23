@@ -86,12 +86,37 @@
                     <ListView.View>
                         <GridView>
                             <GridView.Columns>
-                                <GridViewColumn Width="auto" Header="STT" DisplayMemberBinding="{Binding STT}"></GridViewColumn>
-                                <GridViewColumn Width="auto" Header="Mã thực tập sinh" DisplayMemberBinding="{Binding MaTTS}"></GridViewColumn>
-                                <GridViewColumn Width="auto" Header="Tên thực tập sinh" DisplayMemberBinding="{Binding TenTTS}"></GridViewColumn>
-                                <GridViewColumn Width="auto" Header="Ngày giờ chấm công" DisplayMemberBinding="{Binding NgayChamCong}"></GridViewColumn>
+                                <GridViewColumn Width="auto" Header="STT">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="{Binding STT}" Margin="25,0,0,0"/>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn Width="auto" Header="Mã thực tập sinh">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="{Binding MaTTS}" Margin="50,0,0,0"/>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn Width="auto" Header="Tên thực tập sinh">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="{Binding TenTTS}" Margin="15,0,0,0"/>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn Width="auto" Header="Ngày giờ chấm công">
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="{Binding NgayChamCong}" Margin="15,0,0,0"/>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
                             </GridView.Columns>
                         </GridView>
+
                     </ListView.View>
                 </ListView>
             </ScrollViewer>
