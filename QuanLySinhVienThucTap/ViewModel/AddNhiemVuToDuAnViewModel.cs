@@ -144,7 +144,7 @@ namespace QuanLySinhVienThucTap.ViewModel
 
             };
 
-            
+
             MessageBoxResult result = MessageBox.Show("Bạn có chắc chắn muốn thêm nhiệm vụ không?", "Xác nhận", MessageBoxButton.OKCancel, MessageBoxImage.Warning);
 
             if (result == MessageBoxResult.OK)

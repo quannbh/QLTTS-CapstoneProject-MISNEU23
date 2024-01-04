@@ -118,12 +118,12 @@ namespace QuanLySinhVienThucTap.ViewModel
                 MaPhongBan = DataProvider.Ins.DB.tblQLs.Where(x => x.MaQL == UserId).Select(x => x.MaPhongBan).FirstOrDefault()
             };
 
-            string message = $"Bạn có chắc chắn muốn thêm Dự án này không?\n" +
+            string _messageAddProject = $"Bạn có chắc chắn muốn thêm Dự án này không?\n" +
                 $"Mã Dự án: {generateMaDA}\n" +
                  $"Tên Dự án: {TenDA}\n" +
                  $"Phòng Ban: {PhongBan}\n";
 
-            MessageBoxResult result = MessageBox.Show(message, "Xác nhận", MessageBoxButton.OKCancel);
+            MessageBoxResult result = MessageBox.Show(_messageAddProject, "Xác nhận", MessageBoxButton.OKCancel);
 
             if (result == MessageBoxResult.OK)
             {

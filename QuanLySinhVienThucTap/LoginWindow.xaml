@@ -27,29 +27,29 @@
             <uc:ControlBarUC Loaded="ControlBarUC_Loaded"></uc:ControlBarUC>
         </Grid>
         <materialDesign:Card Grid.Row="1" Margin="0 100 0 0" Width="500" Height="400" HorizontalAlignment="Center" VerticalAlignment="Center" >
-                <Grid>
-                    <Grid.Resources>
-                        <Style TargetType="Grid">
-                            <Setter Property="Margin" Value="15 15 15 15"></Setter>
-                        </Style>
-                    </Grid.Resources>
-                    <Grid.RowDefinitions>
-                        <RowDefinition></RowDefinition>
-                        <RowDefinition></RowDefinition>
-                        <RowDefinition></RowDefinition>
-                        <RowDefinition></RowDefinition>
-                        <RowDefinition></RowDefinition>
-                    </Grid.RowDefinitions>
-                    <Grid Grid.Row="0">
-                        <TextBlock Text="ĐĂNG NHẬP HỆ THỐNG" FontSize="20" FontWeight="Bold" Foreground="Black" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
-                    </Grid>
-                    <Grid Grid.Row="1">
-                        <TextBox
+            <Grid>
+                <Grid.Resources>
+                    <Style TargetType="Grid">
+                        <Setter Property="Margin" Value="15 15 15 15"></Setter>
+                    </Style>
+                </Grid.Resources>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <TextBlock Text="ĐĂNG NHẬP HỆ THỐNG" FontSize="20" FontWeight="Bold" Foreground="Black" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+                </Grid>
+                <Grid Grid.Row="1">
+                    <TextBox
                             Text="{Binding UserName}"
                   materialDesign:HintAssist.Hint="Tên đăng nhập"
                   Style="{StaticResource MaterialDesignFloatingHintTextBox}" TextChanged="TextBox_TextChanged" />
-                    </Grid>
-                    <Grid Grid.Row="2">
+                </Grid>
+                <Grid Grid.Row="2">
                     <PasswordBox
                   x:Name="FloatingPasswordBox"
                   materialDesign:HintAssist.Hint="Mật khẩu"
@@ -62,8 +62,8 @@
                         </i:Interaction.Triggers>
                     </PasswordBox>
                 </Grid>
-                    <Grid Grid.Row="3">
-                        <ComboBox Grid.Row="2" 
+                <Grid Grid.Row="3">
+                    <ComboBox Grid.Row="2" 
                   ItemsSource="{Binding Path=LoginModes}"
                     DisplayMemberPath="Name"
                     SelectedValuePath="Value"
@@ -72,13 +72,13 @@
                   materialDesign:HintAssist.IsFloating="true"
                   materialDesign:HintAssist.Hint="Chế độ đăng nhập"
                  />
-                    </Grid>
-                    <Grid Grid.Row="4">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition></ColumnDefinition>
-                            <ColumnDefinition></ColumnDefinition>
-                        </Grid.ColumnDefinitions>
-                        <Button Grid.Column="0" Margin="20 0 20 0"
+                </Grid>
+                <Grid Grid.Row="4">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition></ColumnDefinition>
+                        <ColumnDefinition></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0" Margin="20 0 20 0"
                           Content="ĐĂNG NHẬP"
                            Background="DarkBlue"
                           Command="{Binding LoginCommand}"
@@ -86,7 +86,7 @@
                           IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
                           Style="{StaticResource MaterialDesignRaisedButton}"
                           ToolTip="Resource name: MaterialDesignRaisedButton" />
-                        <Button Grid.Column="1" Margin="20 0 20 0"
+                    <Button Grid.Column="1" Margin="20 0 20 0"
                           Background="DarkRed"
                           Content="THOÁT"
                           Command="{Binding Quit}"
@@ -94,8 +94,8 @@
                           IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
                           Style="{StaticResource MaterialDesignRaisedButton}"
                           ToolTip="Resource name: MaterialDesignRaisedButton" />
-                    </Grid>
                 </Grid>
-            </materialDesign:Card>
-        </Grid>
+            </Grid>
+        </materialDesign:Card>
+    </Grid>
 </Window>

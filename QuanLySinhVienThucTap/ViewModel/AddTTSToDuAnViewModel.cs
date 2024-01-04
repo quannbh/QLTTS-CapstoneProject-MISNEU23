@@ -119,6 +119,6 @@ namespace QuanLySinhVienThucTap.ViewModel
             {
                 MessageBoxResult result = MessageBox.Show("Bản ghi đã tồn tại. Bạn đã thêm thực tập sinh trước đó. Vui lòng thoát để kiểm tra.", "Thông báo", MessageBoxButton.OK, MessageBoxImage.Information);
             }
-            }
         }
+    }
 }

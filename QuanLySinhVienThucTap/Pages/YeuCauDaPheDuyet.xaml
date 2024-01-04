@@ -76,7 +76,6 @@
                                 <GridViewColumn Width="auto" Header="Ngày tạo">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
-                                            <!-- Định dạng Ngày tạo nếu cần -->
                                             <TextBlock Margin="0,0,0,0" Text="{Binding NgayTao}" TextAlignment="Right" />
                                         </DataTemplate>
                                     </GridViewColumn.CellTemplate>
@@ -93,7 +92,6 @@
                                 <GridViewColumn Width="auto" Header="Ngày hiệu lực">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
-                                            <!-- Định dạng Ngày hiệu lực nếu cần -->
                                             <TextBlock Margin="0,0,0,0" Text="{Binding NgayHieuLuc}" TextAlignment="Right" />
                                         </DataTemplate>
                                     </GridViewColumn.CellTemplate>
