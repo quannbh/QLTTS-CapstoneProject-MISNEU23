@@ -49,7 +49,6 @@
                                         </DataTemplate>
                                     </GridViewColumn.CellTemplate>
                                 </GridViewColumn>
-
                                 <GridViewColumn Width="auto" Header="Mã Yêu cầu">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
@@ -57,7 +56,6 @@
                                         </DataTemplate>
                                     </GridViewColumn.CellTemplate>
                                 </GridViewColumn>
-
                                 <GridViewColumn Width="auto" Header="Tên Thực tập sinh">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
@@ -65,7 +63,6 @@
                                         </DataTemplate>
                                     </GridViewColumn.CellTemplate>
                                 </GridViewColumn>
-
                                 <GridViewColumn Width="auto" Header="Ngày tạo">
                                     <GridViewColumn.CellTemplate>
                                         <DataTemplate>
